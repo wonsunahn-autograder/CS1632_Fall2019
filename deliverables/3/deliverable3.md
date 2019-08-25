@@ -1,7 +1,7 @@
 # CS 1632 - Software Quality Assurance
-Fall Semester 2017
+Fall Semester 2019
 
-DUE 30 OCT 2017
+DUE: TBD
 
 ## Deliverable 3
 
