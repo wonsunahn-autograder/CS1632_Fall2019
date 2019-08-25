@@ -1,48 +1,140 @@
-# CS 1632 - Software Quality Assurance
-Fall Semester 2018 - Exercise 3
+# Unit Testing Exercise 3
 
-For this exercise, you and a partner will write unit tests for the `name` program.  This program will tell us the upper-case version of the passed-in name, the number of characters in the name, the excited version of the name (upper-case and followed by three exclamation points), whether or not the name is long, and whether or not the name is futuristic.
+## Description
 
-## Grading
+In this exercise, we will simulate the main Rent-A-Cat rental system software.  This is obviously a "toy" implementation of the vast and powerful Rent-A-Cat apparatus.
 
-This is an exercise and is thus not graded.
+I have created a framework for you for this exercise.  It is up to you to fill in the `returnCat()`, `rentCat()`, `listCats()` and `catExists()` methods, and write unit tests for them.  Each unit test should use doubles.  You may have unit tests which have stubs or mocks as well.
 
-## Requirements
+Rent-A-Cat rents cats to customers for various needs (mousing, companionship, homework help, etc.).  From the main menu, users may:
 
-Note that unlike systems-level tests, unit tests do not need to map directly to requirements.  However, they are often useful for determining what needs to be done (and in this case, they do map pretty well to requirements).
+1. See list of cats for rent
+2. Rent a cat to a customer
+3. Return a cat
+4. Quit
 
-1. The program shall accept one and only one argument from the command line.  If no arguments, or more than one argument, are passed in, the program shall exit.
+A cat which is out for rental cannot be rented and will not be listed until it has been returned.  As part of this exercise, we will not charge money.
 
-1. If a single argument is passed in, the program shall display the upper-case version of the passed-in name, the number of characters in the name, the excited version of the name, whether or not the name is long, and whether or not the name is futuristic.
+## Sample Output
 
-1. The upper-case version of the name shall be a version of the name where for any alphabetic character, it shall print the upper-case version.
+```
+Option [1,2,3,4] > 1
+Cats for Rent
+ID 1. Jennyanydots
+ID 2. Old Deuteronomy
+ID 3. Mistoffelees
+Option [1,2,3,4] > 2
+Rent which cat? > 1
+Jennyanydots has been rented.
+Option [1,2,3,4] > 1
+Cats for Rent
+ID 2. Old Deuteronomy
+ID 3. Mistoffelees
+Option [1,2,3,4] > 2
+Rent which cat? > 1
+Sorry, Jennanydots is not here!
+Rent which cat? > 7
+Invalid cat ID.
+Rent which cat? > 3
+Mistoffelees has been rented.
+Option [1,2,3,4] > 1
+Cats for Rent
+ID 2. Old Deuteronomy
+Option [1,2,3,4] > 3
+Return which cat? > 7
+Invalid cat ID.  
+Return which cat? Jennyanydots
+Invalid cat ID.
+Return which cat? 1
+Welcome back, Jennyanydots!
+Option [1,2,3,4] > 1
+Cats for Rent
+ID 1. Jennyanydots
+ID 2. Old Deuteronomy
+Option [1,2,3,4] > 4
+Closing up shop for the day!
+```
 
-1. The number of characters shall be the number of characters included in the name, not including end-of-string characters.  For example, 'Bob' shall be 3 and 'Mary' shall be 4.
 
-1. The excited name shall be the passed-in name in upper-case, with three exclamation points after it.  For example, 'jan' should become 'JAN!!!'.
+You should also write appropriate unit tests for each public method.  There should be at least one unit test per method, and a total of at least SIX unit tests.  You may group these however you like - (e.g., one unit test for three methods, and three for the last one; two unit tests for two methods, one unit test each for the other two; etc.)
 
-1. The name shall be considered long if it is longer than 15 characters, i.e. 0..15 characters shall be considered not long, and 16..infinity characters shall be considered long.
+Note that while I have provided a TestRunner, I have NOT provided a Test file!  You will need to create the Test file as well as modify the TestRunner to include the correct classes.  You can view the CommandLineJunit subdirectory for an example of how to do this.
 
-1. The name shall be considered futuristic if the total of the number of 'x' and 'z' characters (case-insensitive, that is, 'X' and 'Z' count as well) is greater than 25% of the entire number of characters.  For example, 'xaXx' is futuristic, but 'aaaaax' is not.
+You should use test doubles/mocks for any references to classes other than the one under test (i.e., double or mock any Cat objects).  You may use an ArrayList of doubled objects (that is, you do not need to double ArrayList itself).
 
-## Running Tests
+You do not need to test any of the methods in the Cat class, although if you do find a defect there your team will get a bonus point.
 
-To run Minitest tests, first make sure that you have Minitest installed.  You should be able to do this by running `bundle install` if you have `bundler` installed.  If you don't, install `bundler` by typing `gem install bundler` at the command line.  You may also install Minitest directly by typing `gem install minitest`.
+## Running Unit Tests
 
-To run the tests, type "ruby main_test.rb".  You will note that there are two different "program" files, `name.rb` and `namer.rb`.  This is so we can include the Namer class WITHOUT executing the program.  Note that the `namer.rb` file only includes the Namer class definition - there is nothing to execute.  If we did a `require_relative` on `name.rb`, it would run the whole program - that is not what we want for the tests.
+If you do this in an IDE such as Eclipse, or with a build tool like Gradle, this can be handled automatically.  HOWEVER, please do not do this!  I want you to realize what is happening "behind the scenes".
 
-Note that we have a `main_test.rb` file which requires the namer_test.rb file.  This seems superfluous now, but it is a good idea to get in the habit of doing this, especially as we move to program with multiples files to test.
+First, we need to create a test runner.  I have created a simple one (TestRunner.java) for you (which you should modify to work with the RentACat class).  You should create your own unit test file for RentACat called RentACatTest.java.  The example files are located in the CommandLineJunit subdirectory under the exercises subdirectory in the class repo.  This will also include the two jar files you will need to use junit.
 
-## Why Name vs Namer?
+To run it, you will need to compile it and ensure that the junit and hamcrest jars are in your classpath.
 
-Recall that running any Ruby file executes it - there is not the distinction between compilation and execution as seen in Java.  Therefore, we will often have a very simple "main" program in its own file, with all or the majority of code in the static (non-definitional) context, and then all classes are in their own files.  Tests will ignore main (as requiring it would actually execute the program) and only call the class files.  Main can then be handled by systems-level testing.
+```
+$ javac -cp ./junit-4.12.jar:./hamcrest-core-1.3.jar:./mockito-core-1.10.19.jar:./objenesis-2.4.jar *.java
 
-By having `namer.rb` and `namer_test.rb`, we can require the class and merely define it, not execute any code.  This will allow us to then call specific methods to be tested by namer_test.
+$ java -cp .:./junit-4.12.jar:./hamcrest-core-1.3.jar:./mockito-core-1.10.19.jar:./objenesis-2.4.jar TestRunner
+testShouldFail(NoogieTest): expected null, but was:<java.lang.Object@22d8cfe0>
+testMeowAndBarkAreEqualWillFail(CoogieTest): expected:<[Meow]> but was:<[Bark]>
 
-## Issues
+!!! - At least one failure, see above.
+```
 
-There are at least three issues with the Namer code.  You should write automated unit tests that find these issues, and then fix them.  Your final code should have ZERO failing tests!
+You will need to write your own test files, of course (you may use NoogieTest and CoogieTest as basic templates).
 
-Please write at least two unit tests for each of the methods in `namer.rb` in`namer_test.rb`.  You should do equivalence class partioning and think of edge/corner cases when writing these unit tests.
+Replace ":" with ";" on Windows machines ( `java -cp .;./junit-4.12.jar;./hamcrest-core-1.3.jar TestRunner` ) .  If you are using Windows 7, you will also need to put the classpath argument entirely in quotes ( `java -cp ".;./junit-4.12.jar;./hamcrest-core-1.3.jar" TestRunner` )
 
-You should not have to modify any code other than in `namer.rb` and `namer_test.rb`.
+Don't use "~" or other shortcuts when referring to the path that the `junit` and `hamcrest` jar files live.  Your Java files may compile but then won't run - apparently the `-cp` option in `javac` parses paths different than `java`.  This is because LOL programming.
+
+## Tips
+
+1. Check to see if junit works on your machine before starting to code.
+1. Don't write all the code and then write tests - write tests as you go along!  This way you will discover what is easy and hard to test, and shake out the problems as you go along.  Otherwise, you will be stuck trying to fix all of them at the very end, and may have to do some major code refactoring to get back to a reasonably testable system.
+1. Remember to _not_ double the class under test (i.e. RentACat), only classes that it depends upon.
+2. The easiest thing to do is assert against a return value, but you can also assert against attributes of an object.  For example:
+```
+@Test
+public void testChangeCatName() {
+   Cat c = new Cat("Bustopher Jones", 150.00);
+   String newName = "Growltiger";
+   c.setName(newName);
+   assertEquals(c.getName(), newName);
+}
+```
+3. If you are going to have to double an object inside a method, be sure to allow it to be passed in as an argument!  This is called _dependency injection_.  Example:
+```
+// BAD - how can we double Duck?
+public int lotsOfQuacks() {
+    Duck d = new Duck();
+    int numQuacks = 0;
+    for (int j = 0; j < 100; j++) {
+        numQuacks += d.quack();
+    }
+    return numQuacks;
+}
+
+// BETTER - dependency injection
+public int lotsOfQuacks(Duck d) {
+    int numQuacks = 0;
+    for (int j = 0; j < 100; j++) {
+        numQuacks += d.quack();
+    }
+    return numQuacks;
+}
+```
+* Try to ensure that you check not only for "happy path" cases but also edge cases.
+* Tests are usually grouped into whichever classes they are testing, and have a filename that has `Test` appended to the name.  For example, Foo.java would be tested by FooTest.java.
+* Testing println's or other output is difficult - try to have methods return Strings which are easier to test.  It is possible to test for I/O but it requires some extra steps - see Chapter 14, Section 6 of the textbook for instructions.
+  
+
+Please send me a link to the GitHub repository where you stored it before the beginning of the next class, along with any partner with whom you worked on the project.  Be sure to CC your partner so that they know the email was sent!
+
+If you finish by 9 AM tomorrow morning, I will send you feedback which may help you in your deliverable.  If you send it after then, I may not get a chance to review it before the deliverable is due (although I will do my best).
+
+```
+Program works correctly: 0.5 point
+Tests work correctly and good test coverage: 1.5 points
+```
+

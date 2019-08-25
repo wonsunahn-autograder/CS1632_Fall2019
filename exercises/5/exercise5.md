@@ -1,34 +1,44 @@
-# CS 1632 - Software Quality Assurance
+# Exercise 5 Performance Testing Exercise
 
-## Exercise 5
+For this exercise, you and a partner will profile some monkey simulation software, and improve its performance by refactoring two methods (to be determined by the results of the profiling).  This will consist of several parts:
 
-For this assignment, you and a partner will update the "guessing game" in `/sample_code/sinatra_example` and add systems-level, automated black-box tests using Katalon Automation Recorder.  Your tests should focus on the functionality you will add (below).
+1. Profiling (before) to determine which methods are the most CPU-intensive
+3. Refactoring two methods to be more performant (from a CPU and time perspective)
+4. Profiling (after) showing that your rewrite helped make your method more performant
 
-I recommend you do a minimum of six tests, checking various base, edge, and corner cases.  However, do not focus on the number of tests too heavily; I am more concerned that you cover a broad variety of cases, and ones which are focused and still likely to find defects.
+Code is available on Github (https://github.com/laboon/MonkeySim).
 
-I also recommend that you write the code for the test mode first, as it will make your other testing much easier.  Then write the Katalon tests for the test mode.  Then you can work on the code for the second requirement, then finally the Katalon tests for the second requirement.
+This code runs MonkeySim, which simulates a group of monkeys throwing a banana back around until it gets to the first monkey.  It accepts one argument, which states which monkey has the banana initially.
 
-## Functionality to Add
+The game shall continue until the first monkey gets the banana, at which point the simulation shall end.
 
-1. Add a "test" mode.  If a param called "test" with any integer value is passed in, the secret number should be set to whatever the test value is.  If the test parameter cannot be interpreted as an integer or is an invalid integer (i.e., one greater than 100 or less than 1), the secret number should be set to 50.
-2. If the user is within 5, inform the user that they are close (e.g., if the secret number is 10 - 11, 12, 13, 14, or 15, or 5, 6, 7, 8, or 9, would all show the message, other numbers would not) with the message "You're really close!", unless they have the number exactly right.  Otherwise display nothing (except the original message of whether they are too high or too low).  For example, assuming the secret number is 50, and their guess is:
+The monkey who has the banana shall throw it to another monkey during each round.
 
-* 50 - That's exactly right!
-  * _There is no need to say that they are close if it is exact._
-* 75 - That's too high!
-  * _It is too high, but it is not close._
-* 52 - That's too high!  You're really close!
-  * _It is too high, but it is within five of the correct answer._
-* 25 - That's too low!
-  * _It is too low, but it is not close._
-* 48 - That's too low!  You're really close!
-  * _It is too low, but it is within five of the correct answer._
+If a monkey is even-numbered (e.g., monkey #2, monkey #4, etc.), then the monkey with the banana shall throw the banana to the monkey equal to one-half of that initial monkey's number.  For example, monkey #4 shall throw the banana to monkey #2, and monkey #20 shall throw the banana to monkey #10.
 
-## Tips
+If a monkey is odd-numbered (and not monkey #1), the monkey with the banana shall throw it to the monkey equal to three times the number of that monkey plus one `(3n + 1)`.  For example, monkey #5 shall throw the banana to monkey #16 `((3 * 5) + 1)`.
 
-1. I recommend you get the test mode functionality working correctly first.  This will allow you to write and test the "You're really close" feature more easily.
-2. For the "You're really close" feature, you can add this functionality to the same message generator function (to pass in different methods) or create a separate close/not close variable to pass in to the ERB file.  Either will work.
+If Monkey #1 catches the banana, the system shall display the number of rounds it took for Monkey #1 to catch the banana and then the program shall exit.
 
-## Grading
+At each round, the current status of who is doing the throwing and who is catching shall be displayed, along with the round number (which should start at 1).  It should use the following format: "Round 1: Threw banana from Monkey (#54 / ID 223546) to Monkey (#27 / ID 223519)"
 
-This is an exercise and thus not graded.  Please feel free to speak to or email me to discuss any problems that you have.
+Each monkey has an ID; this ID shall remain constant.  For instance, Monkey #5 shall always have ID 223497, and Monkey #160 shall always have ID 223652.  Any changes to the code should not modify the ID value.
+
+Output for a given input should be EXACTLY the same as the initial output.  Sample runs are shown in the sample_runs.txt file.  Please be sure that your code operates the exact same way as the initial code.
+
+In case of ambiguity in the requirements, the sample_runs.txt file shall be considered the correct implementation.
+
+If you encounter an infinite loop (where, if the algorithm is implemented correctly, the first monkey NEVER gets the banana), you will receive a __sizable__ amount of extra credit, assuming you let me know the initial number you entered.
+
+In order to determine the "hot spots" of the application, you will need to run a profiler such as VisualVM (download at https://visualvm.github.io/).  Using a profiler, determine a method you can use to measurably increase the speed of the application without modifying behavior.
+
+This program should work EXACTLY the same as before, except it should be faster and take up less CPU time.  The only exception is if you come across an error and fix it - no points will be taken off as long as you note it in your email.
+
+
+You should email me a link to your fixed MonkeySim code by the beginning of the next class.
+
+```
+Method 1 changed, performance improved: 1 point
+Method 2 changed, performance improved: 1 point
+```
+ 
