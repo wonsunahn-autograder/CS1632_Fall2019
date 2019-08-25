@@ -1,7 +1,7 @@
 # CS1632 Deliverable 4
-Spring Semester 2015
+Fall Semester 2019
 
-DUE 24 MAR 2016
+* DUE: TBD
 
 ## Deliverable 4
 

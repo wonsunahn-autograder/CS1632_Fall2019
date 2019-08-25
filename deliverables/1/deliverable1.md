@@ -1,5 +1,5 @@
 # CS 1632 - Software Testing
-Spring Semester 2016
+Fall Semester 2019
 
 * DUE: TBD
 
