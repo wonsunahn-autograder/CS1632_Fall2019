@@ -37,15 +37,16 @@ This course provides students with a broad understanding of modern software test
 
 ## Grading
 
-* Projects (70%):
+* Projects (80%):
   * Deliverable 1 - 10%
   * Deliverable 2 - 15%
   * Deliverable 3 - 15%
   * Deliverable 4 - 15%
-  * Deliverable 5 - 15%
-* Midterms (30%):
-  * Midterm 1 - 15%
-  * Midterm 2 - 15%
+  * Deliverable 5 - 10%
+  * Deliverable 6 - 15%
+* Midterms (20%):
+  * Midterm 1 - 10%
+  * Midterm 2 - 10%
 
 Although you are not required to come to every class, it is recommended that you do.  You _are_ required to be present for exams.  Exams will NOT be allowed to be made up except with a valid and verified excuse (generally medical - others are left to the discretion of the instructor).
 
