@@ -1,30 +1,27 @@
 # CS 1632
-Software Quality Assurance - Spring 2019
+Software Quality Assurance - Fall 2019
 
 ## Course Information
 
-**Taught by:** Bill Laboon (laboon at cs dot pitt dot edu)
-  * GitHub username: laboon
+**Taught by:** Wonsun Ahn (wahn at pitt dot edu)
+  * GitHub username: wonsunahn
 
 **Instructor's Office Hours:**
 
-  * SENSQ 6305
-  * Thursday 12:00 - 1:30 PM and Friday 9:00 AM - 10:30 AM
+  * SENSQ 5423
+  * Hours: TBD
   * ... or by appointment.
 
 **Class Time:**
-  * Mon/Wed 11:00 AM- 12:15 PM (203 Lawrence Hall)
-  * Mon/Wed 1:00 PM - 2:15 PM (5129 Sennott Square)
-  * Tue/Thu 9:30 AM - 10:45 AM (405 IS Building) 
+  * Mon/Wed 9:30 AM- 10:45 PM (5129 Sennott Square)
+  * Mon/Wed 3:00 PM - 4:15 PM (404 IS Building) 
 
 **TA**:
-  * Mon/Wed 11:00 AM- 12:15 PM Tianyi Cui (GitHub username `TyaCUI`)
-  * Mon/Wed 1:00 PM - 2:15 PM Akhil Yendluri (GitHub username _TBD_)
-  * Tue/Thu 9:30 AM - 10:45 AM Xiaoyu Liang (GitHub username `Grade-CS1632`)
-
+  * TBD
+  
 _Note: The TA for the course acts as a grader.  If you have questions on the topics themselves, please email the instructor._
 
-**Class GitHub repo:** https://www.github.com/laboon/CS1632_Spring2019
+**Class GitHub repo:** https://www.github.com/wonsunahn/CS1632_Fall2019
 
 **Required Texts:**
 * _A Friendly Introduction to Software Testing_ by Bill Laboon.
@@ -42,9 +39,10 @@ This course provides students with a broad understanding of modern software test
 
 * Projects (70%):
   * Deliverable 1 - 10%
-  * Deliverable 2 - 20%
+  * Deliverable 2 - 15%
   * Deliverable 3 - 15%
-  * Deliverable 4 - 25%
+  * Deliverable 4 - 15%
+  * Deliverable 5 - 15%
 * Midterms (30%):
   * Midterm 1 - 15%
   * Midterm 2 - 15%
@@ -89,9 +87,10 @@ Lecture attendance is not required, but is STRONGLY recommended. The instructor 
 ## Project Details
 
 * **Deliverable 1:** Developing a test plan and traceability matrix for a system.
-* **Deliverable 2:** Developing an application using unit tests and static analysis.
-* **Deliverable 3:** Developing a simple web application system with the help of automated systems testing (as well as unit testing and static analysis).
-* **Deliverable 4:** Performance testing, optimization, and property-based testing of an application (as well as unit testing, automated systems testing, and static analysis).
+* **Deliverable 2:** Developing unit tests for a console-based application.
+* **Deliverable 3:** Developing a simple web application system with the help of automated systems testing.
+* **Deliverable 4:** Combinatorial testing and property-based testing of an application.
+* **Deliverable 5:** Performance testing and optimization of an application.
 
 ## Exam Details
 
@@ -99,7 +98,7 @@ There will be two midterm examinations, each worth 15% of your grade.  A study g
 
 ## Programming Language Selection
 
-For all deliverables, the class will use Ruby 2.5.0 or later with the appropriate frameworks and tools (e.g., git, minitest, katalon, rubocop, reek, rantly) as discussed in class.  Projects written in other languages or using alternative frameworks will not be accepted.
+For all deliverables, the class will use Java with the appropriate frameworks (JUnit, Mockito, Selenium).  Projects written in other languages or using alternative frameworks will not be accepted.
 
 ## Participating in Class
 
