@@ -1,133 +1,108 @@
-# Syllabus - Spring 2019
+# Syllabus - Fall 2019
 CS1632 Software Quality Assurance
 
 _Although the instructor will make a best effort to have the class topic on the day listed, occasionally a change must be made (e.g., a lecture going long, or a guest lecturer unable to make it to class that day).  However, these are the topics that will be covered and the expected date that they will be taught._
 
 AFIST = _A Friendly Introduction to Software Testing_ by Bill Laboon
 
-WPGR = _Why's (Poignant) Guide to Ruby_
+## WEEK 1 (Week of 26 AUG)
+* (Class 1) Introduction - What is Software Quality Assurance?
 
-## Week 1 (Week of 7 JAN):
-
-* (Class 1) Introduction
-  * What is Software Quality Assurance?
-  * Go over syllabus and course information
-
-* (Class 2) Basic Testing Theory and Terminology
+* (Class 2)  Basic Testing Theory and Terminology
   * READING: AFIST, Chapters 2 - 4
 
-## Week 2 (Week of 14 JAN):
+## WEEK 2 (Week of 2 SEP)
 
-* (Class 1) Requirements, Test Plans, Traceability Matrices
-  * ASSIGNED: D1
-  * READING: AFIST, Chapters 5 and 6, 8
+* (Class 1) NO CLASS - LABOR DAY
 
-* (Class 2) Breaking Software and Defects
-  * READING: AFIST, Chapters 7 and 9
-  * NOTE: LAST CLASS BEFORE ADD/DROP ENDS!
+* (Class 2) Requirements and Defects
+  * READING: AFIST, Chapters 5 and 9
 
-## Week 3 (Week of 21 JAN):
+## WEEK 3 (Week of 9 SEP)
 
-* (CLASS 1) NO CLASS - MLK DAY - THIS GOES FOR TUESDAY, AS WELL!
+* (Class 1) Test Plans and Breaking Software
 
-* (Class 1) Smoke, Exploratory, and Path-Based Testing
-  * READING: AFIST, Chapter 11
+* (Class 2) EX1: Test Plans
+
+## WEEK 4 (Week of 16 SEP)
+
+* (Class 1) Automated and Manual Testing, Unit Testing Part 1
+  * READING: AFIST, Chapter 12-13
   
-## Week 4 (Week of 28 JAN):
-
-* (Class 1) Intro to Ruby
-  * READING: WPGR, Chapter 1-4
-
-* (Class 2) Intro to Ruby, cont'd
-  * READING: WPGR, Chapter 5-6
-
-## Week 5 (Week of 4 FEB):
-
-* (Class 1) Ruby Exercise
-  * EXERCISE 1
-  * DUE: D1
-  * ASSIGNED: D2
-
-* (Class 2) Manual vs Automated Testing, Static Analysis
-  * READING: AFIST, Chapter 12
-
-## Week 6 (Week of 11 FEB):
-
-* (Class 1) Static Analysis, cont'd.
-  * EXERCISE 2
-
-* (Class 2) Unit Testing and Code Coverage
-  * READING: AFIST, Chapter 13
-
-## Week 7 (Week of 18 FEB):
-
-* (Class 1) Basic Unit Testing Strategy
-  * EXERCISE 3
-
-* (Class 2) Advanced Unit Testing - Doubles, Stubs, Mocks, Verification
+* (Class 2) Unit Testing Part 2
   * READING: AFIST, Chapter 14
 
-## Week 8 (Week of 25 FEB):
+## WEEK 5 (Week of 23 SEP)
 
-* (CLASS 1) Test-driven Development and Writing Testable Code
-  * READING: AFIST, Chapters 15 - 16
+* (Class 1) EX2: Unit Testing
 
-* (Class 2) Advanced Unit Testing Strategy
-  * IN-CLASS EXERCISE 4
+* (Class 2) Test-driven Development
+  * READING: AFIST, Chapter 15
 
-## Week 9 (Week of 4 MAR):
+## WEEK 6 (Week of 30 SEP)
 
-* (Class 1) Automated System Testing w/ Katalon
-  * DUE: D2
-  
+* (Class 1) Writing Testable Code
+  * READING: AFIST, Chapter 16
+
+* (Class 2) EX3: Unit Testing and TDD
+
+## WEEK 7 (Week of 7 OCT)
+
+_Note: Classes that are normally held on Monday are shifted to Tuesday on this week due to the Monday holiday._
+
+* (Class 1) Pairwise and Combinatorial Testing
+  * READING: AFIST, Chapter 17
+
 * (Class 2) MIDTERM 1
-  * Covers everything EXCEPT earlier class this week)
-  * NOTE: LAST CLASS BEFORE WITHDRAWAL DEADLINE!
 
-## Week 10 (Week of 11 MAR):
+## WEEK 8 (Week of 14 OCT)
 
-__NO CLASS - SPRING BREAK__
+* (Class 1) Automated System Testing
 
-## Week 11 (Week of 18 MAR):
+* (Class 2) Automated System Testing, Part 2
 
-* (Class 1) Intro to Sinatra and System Testing
-  * ASSIGNED: D3
+## WEEK 9 (Week of 21 OCT)
 
-* (Class 2) Web-Based System Testing
-  * EXERCISE 5
+* (Class 1) EX4: Automated System Testing
 
-## Week 12 (Week of 25 MAR):
+* (Class 2) Performance Testing, Part 1
+  * READING: AFIST, Chapter 19
 
-* (Class 1) Performance Testing
-  * READING: Chapter 19
+## WEEK 10 (Week of 28 OCT)
 
-* (Class 2) Performance Testing and Optimization
-  * EXERCISE 6
+* (Class 1) Performance Testing, Part 2
 
-## Week 13 (Week of 1 APR):
+* (Class 2) EX5: Performance Testing
 
-* (Class 1) Stochastic, Fuzz, and Property-Based Testing
-  * READING: AFIST, Chapter 18
-  * DUE: D3
-  * ASSIGNED: D4
+## WEEK 11 (Week of 4 NOV)
 
-* (Class 1) Property-Based Testing with Rantly
-  * EXERCISE 7
+* (Class 1) Static Analysis, Part 1
 
+* (Class 2) Static Analysis, Part 2
 
-## Week 14 (Week of 8 APR):
+## WEEK 12 (Week of 11 NOV)
 
-* (Class 1) QA Strategy and Interacting With Stakeholders
+* (Class 1) EX6: Static Analysis
+
+* (Class 2) Developing and Managing a Testing Strategy 
+
+## WEEK 13 (Week of 18 NOV)
+
+* (Class 1) Stochastic and Property-Based Testing
+  * READING: AFIST, Chapter 18 
+
+* (Class 2) Interacting With Stakeholders
   * READING: AFIST, Chapter 21
 
-* (Class 2) MIDTERM 2
+## WEEK 14 (Week of 25 NOV)
 
-## Week 15 (Week of 15 APR):
+* (Class 1) NO CLASS - THANKSGIVING
 
-* (Class 1) Security Testing
+* (Class 2) NO CLASS - THANKSGIVING
+
+## WEEK 15 (Week of DEC 2)
+
+* (4 Dec) Security Testing
   * READING: AFIST, Chapter 20
-  * DUE: D4
 
-* (Class 2) Penetration Testing and Class Wrap-up
-  * EXERCISE 8
-
+* (6 Dec) EX7: Penetration Testing
