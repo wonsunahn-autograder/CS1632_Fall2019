@@ -102,7 +102,13 @@ _Note: Classes that are normally held on Monday are shifted to Tuesday on this w
 
 ## WEEK 15 (Week of DEC 2)
 
-* (4 Dec) Security Testing
+* (Class 1) Security Testing
   * READING: AFIST, Chapter 20
 
-* (6 Dec) EX7: Penetration Testing
+* (Class 2) EX7: Penetration Testing
+
+## WEEK 16 (Week of DEC 9)
+
+_Note: The exact date and time of midterm 2 will be determined when the exam schedule comes out._
+
+* (Class 1) MIDTERM 2
