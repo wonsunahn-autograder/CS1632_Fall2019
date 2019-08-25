@@ -90,8 +90,9 @@ Lecture attendance is not required, but is STRONGLY recommended. The instructor 
 * **Deliverable 1:** Developing a test plan and traceability matrix for a system.
 * **Deliverable 2:** Developing unit tests for a console-based application.
 * **Deliverable 3:** Developing a simple web application system with the help of automated systems testing.
-* **Deliverable 4:** Combinatorial testing and property-based testing of an application.
-* **Deliverable 5:** Performance testing and optimization of an application.
+* **Deliverable 4:** Performance testing and optimization of an application.
+* **Deliverable 5:** Developing a system with the help of static analysis.
+* **Deliverable 6:** Developing and testing a large application.
 
 ## Exam Details
 
