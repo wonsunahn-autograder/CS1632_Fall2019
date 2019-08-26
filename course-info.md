@@ -29,9 +29,6 @@ _Note: The TA for the course acts as a grader.  If you have questions on the top
   * https://github.com/laboon/software-testing/blob/master/software-testing-laboon-ebook.pdf
   * If you like, you may purchase a physical copy on Amazon at: http://www.amazon.com/Friendly-Introduction-Software-Testing/dp/1523477377/ or CreateSpace at: https://www.createspace.com/6008739 .
   * However, I want to emphasize that this is NOT NECESSARY.  All material is available online, either in this repository or in the (freely available) PDF version of the book linked above.  However, some people prefer to have a physical copy.
-  * Note that this book is written with Java - I have a Ruby version under development here ( https://github.com/laboon/software_testing_ebook_ruby ) but it is a work in progress.  You may provide typos and fixes for bonus points (up to 2% of your grade) by filing issues/pull requests.  Individual issues will be scored on  a sliding (and unfortunately somewhat subjective scale), from +0.1 for spotting a typo up to +1 for spotting a major error.
-* Why's (Poignant) Guide to Ruby by _why the lucky stiff.
-  * This is also available for free online - https://poignant.guide/book/
 
 This course provides students with a broad understanding of modern software testing and quality assurance. Although it will cover testing theory, the emphasis is on providing practical skills in software testing currently used in industry. To that end, it will cover: manual and automated tests, test-driven development, performance testing, and understanding and developing a testing strategy.
 
