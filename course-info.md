@@ -29,9 +29,6 @@ _Note: The TA for the course acts as a grader.  If you have questions on the top
   * https://github.com/laboon/software-testing/blob/master/software-testing-laboon-ebook.pdf
   * If you like, you may purchase a physical copy on Amazon at: http://www.amazon.com/Friendly-Introduction-Software-Testing/dp/1523477377/ or CreateSpace at: https://www.createspace.com/6008739 .
   * However, I want to emphasize that this is NOT NECESSARY.  All material is available online, either in this repository or in the (freely available) PDF version of the book linked above.  However, some people prefer to have a physical copy.
-  * Note that this book is written with Java - I have a Ruby version under development here ( https://github.com/laboon/software_testing_ebook_ruby ) but it is a work in progress.  You may provide typos and fixes for bonus points (up to 2% of your grade) by filing issues/pull requests.  Individual issues will be scored on  a sliding (and unfortunately somewhat subjective scale), from +0.1 for spotting a typo up to +1 for spotting a major error.
-* Why's (Poignant) Guide to Ruby by _why the lucky stiff.
-  * This is also available for free online - https://poignant.guide/book/
 
 This course provides students with a broad understanding of modern software testing and quality assurance. Although it will cover testing theory, the emphasis is on providing practical skills in software testing currently used in industry. To that end, it will cover: manual and automated tests, test-driven development, performance testing, and understanding and developing a testing strategy.
 
@@ -114,8 +111,14 @@ The instructor will work to the best of their ability to accommodate any issues 
 
 ## Academic Integrity Statement
 
-The integrity of the academic process requires fair and impartial evaluation on the part of faculty and honest academic conduct on the part of students. To this end, students are expected to conduct themselves at a high level of responsibility in the fulfillment of the course of their study. It is the corresponding responsibility of faculty to make clear to students those standards by which students will be evaluated and the resources permissible for use by students during the course of their study and evaluation. The educational process is perceived as a joint faculty-student enterprise which will perforce involve professional judgment by faculty and may involve—without penalty—reasoned exception by students to the data or views offered by faculty.
-
 Cheating/plagiarism will _not_ be tolerated. Students suspected of violating the University of Pittsburgh Policy on Academic Integrity, from the February 1974 Senate Committee on Tenure and Academic Freedom reported to the Senate Council, will be required to participate in the outlined procedural process as initiated by the instructor. A minimum sanction of a zero score for the quiz or exam will be imposed.
 
 View the complete policy at www.cfo.pitt.edu/policies/policy/02/02-03-02.html.
+
+Some guidelines:
+
+_1. For all graded assignments and exams, viewing the work done by your classmates (or a 3rd source) before submission is considered cheating.  Aiding this activity is also considered cheating.  The only exception is your designated group members for your group projects._
+
+_2. For ungraded in-class exercises, you are allowed (and encouraged) to look at your classmates' work and discuss it.  If you get ample help for the exercises, you should rarely need additional help for the projects._
+
+_3. If you need additional help for the projects, your best source is your instructor._
