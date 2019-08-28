@@ -3,7 +3,7 @@ Fall Semester 2019
 
 DUE: TBD
 
-## Deliverable 5
+## Deliverable 4
 
 For this assignment, you (NOT a group) will profile a Conway's Game of Life simulation, and improve its performance by refactoring several methods (to be determined by the results of the profiling).  This will consist of several parts:
 
