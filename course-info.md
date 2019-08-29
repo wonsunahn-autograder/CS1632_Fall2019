@@ -96,7 +96,7 @@ Lecture attendance is not required, but is STRONGLY recommended. The instructor 
 
 ## Exam Details
 
-There will be two midterm examinations, each worth 15% of your grade.  A study guide will be posted approximately one week before each exam.
+There will be two midterm examinations, each worth 10% of your grade.  A study guide will be posted approximately one week before each exam.
 
 ## Programming Language Selection
 
