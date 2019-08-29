@@ -9,15 +9,18 @@ Software Quality Assurance - Fall 2019
 **Instructor's Office Hours:**
 
   * SENSQ 5423
-  * Hours: TBD
+  * Hours: Tue 1:00 PM - 3:00 PM, Fri 2:30 PM - 4:30 PM
   * ... or by appointment.
 
 **Class Time:**
-  * Mon/Wed 9:30 AM- 10:45 PM (5129 Sennott Square)
+  * Mon/Wed 9:30 AM - 10:45 PM (5129 Sennott Square)
   * Mon/Wed 3:00 PM - 4:15 PM (404 IS Building) 
 
 **TA**:
-  * TBD
+  * Nikunj Goel
+  * SENSQ 6148
+  * Hours: Mon 12:00 PM - 2:00 PM, Wed 12:00 PM - 2:00 PM
+  * ... or by appointment.
   
 _Note: The TA for the course acts as a grader.  If you have questions on the topics themselves, please email the instructor._
 
