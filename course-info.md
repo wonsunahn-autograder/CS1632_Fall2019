@@ -17,7 +17,7 @@ Software Quality Assurance - Fall 2019
   * Mon/Wed 3:00 PM - 4:15 PM (404 IS Building) 
 
 **TA**:
-  * Nikunj Goel
+  * Nikunj Goel (nig54 at pitt dot edu)
   * SENSQ 6148
   * Hours: Mon 12:00 PM - 2:00 PM, Wed 12:00 PM - 2:00 PM
   * ... or by appointment.
