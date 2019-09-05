@@ -95,5 +95,5 @@ For this project, you should endeavour to get a good sampling of different equiv
   * Includes functionality *and* code quality!
 * Test Code - 40%
 
-Please feel free to email me at bill@billlaboon.com or come to office hours to discuss any problems you have. 
+Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
  
