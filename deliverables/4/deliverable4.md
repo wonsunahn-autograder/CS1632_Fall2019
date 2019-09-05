@@ -56,5 +56,5 @@ There should be a *bare minimum* of least three pinning tests per method modifie
 * Method choice and refactoring - 40%
 * Pinning Tests - 40%
 
-Please feel free to email me at laboon@cs.pitt.edu or come to office hours to discuss any problems you have. 
+Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
  
