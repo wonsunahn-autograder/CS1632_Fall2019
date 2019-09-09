@@ -1,4 +1,4 @@
-FUN-DISPLAY-RESULTS - The system shall calculate the results of switching or staying, according to the defined Monty Hall problem, for "number of times" iterations.  The system shall display this information to the user, using percentages with up to three places after the decimal, and then stop execution.  This display shall print out the passed-in String versions of the "good" and "bad" options as defined in the arguments.
+FUN-DISPLAY-RESULTS - The system shall display the results of Monty Hall simulation to the user, using percentages with up to three places after the decimal, and then stop execution.  This display shall print out the passed-in String versions of the "good" and "bad" options as defined in the arguments.
 
 FUN-ARGS-NUMBER - The system shall accept four arguments from the command line, in the following order: good option, bad option, number of times, number of threads.  If there are fewer or more than four arguments, the system shall display the usage information for the program and shut down.
 
