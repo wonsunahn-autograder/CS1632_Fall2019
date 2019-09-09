@@ -77,6 +77,10 @@ The requirements are listed in the file requirements.md in this directory.
 
 ## Submission
 
-Each group should email the 6 test cases, traceability matrix, and 2 defects to our TA Nikunj Goel (nig54 at pitt dot edu) and myself (wahn @ pitt dot edu) in PDF format before the next class.  Each section should start on a new page.  Please use the title "CS1632 exercise 1 [Your Full Names]".  E.g. "CS1632 exercise 1 Jane Doe, John Doe".
+Each pairwise group will submit the exercise once to courseweb, by one member of the group.  Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Exercise 1".  You can either submit a text version or upload a PDF format.  The document should contain the 6 test cases, traceability matrix, and 2 (or more) defects in separate sections.
 
-Note that this exercise is not graded.  However, it is strongly recommended that you submit the exercise and get feedback in preparation for deliverable 1.
+Please don't forget to write the names of the group members at the top of the document! This applies to all submission in this class.
+
+When your exercise is marked as graded, you should find feedback written by Nick, our TA, on your grade details.  Nick will leave the same feedback for all group members.
+
+Note that the in-class exercise is not graded.  However, an extra credit of 1 point out of 100 points for the entire course will be awarded to the group that finds the most number of defects in the program.  There can be multiple winners too if there is a tie!
