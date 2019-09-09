@@ -28,6 +28,7 @@ The IDENTIFIER is some value which will UNIQUELY specify the test case.  It can 
 Remember the correct format for defects -
 
 ```
+	 IDENTIFIER:
 	 SUMMARY:
 	 DESCRIPTION:
 	 REPRODUCTION STEPS:
