@@ -7,13 +7,13 @@ There should be six (no more, no less) test cases altogether.
 
 Test cases should mention all necessary preconditions, execution steps, and postconditions.
 
-It is expected that you actually execute the test plan in order to find the defects, along with some exploratory testing to determine how the system works and where defects might lie.  There are AT LEAST two defects.  Full credit will be given only to those who properly find and describe at least two.  While you are not expected to find *all* of the defects, a reasonable test plan should definitely find at least two.  This is an intentionally target-rich environment.
+It is expected that you actually execute the test plan in order to find the defects, along with some exploratory testing to determine how the system works and where defects might lie.  While you are not expected to find *all* of the defects, a reasonable test plan should definitely find at least two.  This is an intentionally target-rich environment.
 
 You should EMAIL me the completed test plan.  This must be in to me by the next class, although I highly recommend you work on it in class.
 
-You may ask me any questions on writing a test plan during class.
+You may ask me any questions you may have during class.  It's not graded.  Ask me anything.
 
-Remember the correct format for test cases -
+Remember, the template for test cases -
 
 ```
 	IDENTIFIER:
@@ -23,7 +23,7 @@ Remember the correct format for test cases -
 	POSTCONDITIONS:
 ```
 
-The IDENTIFIER is some value which will UNIQUELY specify the test case.  It can be a number, word or any other mnemonic (e.g. TEST-INVALID-TIMES, TEST-LOW-NUM-TIMES, etc.).
+The IDENTIFIER is some value which will UNIQUELY specify the test case.  It can be a number, word or any other mnemonic (e.g. TEST-INVALID-TIMES, TEST-LOW-NUM-TIMES, etc.).  Note that the INPUT VALUES and OUTPUT VALUES fields in the template are omitted because we are not yet doing method unit testing.
 
 Remember the correct format for defects -
 
@@ -45,7 +45,6 @@ Note that it is NOT necessary for all requirements to be covered by this assignm
 
 Hint: Try to have a combination of explicit boundary values and implicit boundary values in your test cases.  As we learned, this is where most of the defects will reside!
 
-```
 ## GoatGoatCar
 GoatGoatCar is going to be our way of determining the correct answer to the "Monty Hall Problem" (https://en.wikipedia.org/wiki/Monty_Hall_problem).  The Monty Hall Problem can be summarized as follows:
 
@@ -75,3 +74,8 @@ GoatGoatCar.jar is available in this directory.
 
 The requirements are listed in the file requirements.md in this directory.
 
+## Submission
+
+Each group should email the 6 test cases, traceability matrix, and 2 defects to our TA Nikunj Goel (nig54 at pitt dot edu) and myself (wahn @ pitt dot edu) in PDF format before the next class.  Each section should start on a new page.  Please use the title "CS1632 exercise 1 [Your Full Names]".  E.g. "CS1632 exercise 1 Jane Doe, John Doe".
+
+Note that this exercise is not graded.  However, it is strongly recommended that you submit the exercise and get feedback in preparation for deliverable 1.
