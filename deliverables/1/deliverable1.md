@@ -67,5 +67,5 @@ java -jar coffeemaker.jar
 
 The requirements are listed in the file requirements.txt.
 
-Please feel free to email me at laboon@cs.pitt.edu or come to office hours to discuss any problems you have. 
+Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
  
