@@ -79,7 +79,7 @@ The requirements are listed in the file requirements.md in this directory.
 
 Each pairwise group will submit the exercise *once* to courseweb, by *one member* of the group.  Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Exercise 1".  You can either submit a text version or upload a PDF format.  The document should contain the 6 test cases, traceability matrix, and 2 (or more) defects in separate sections.
 
-*Please don't forget to write the names of all group members at the top of the document! This applies to all submission in this class.*
+*Don't forget to write the names of all group members at the top of the document! This applies to all submissions.*
 
 When your exercise is marked as graded, you should find feedback written by Nick, our TA, on your grade details.  Nick will leave the same feedback for all group members.
 
