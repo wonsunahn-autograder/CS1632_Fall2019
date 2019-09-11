@@ -44,7 +44,7 @@ Note that some test cases may actually test several requirements.  You should sp
 
 Note that it is NOT necessary for all requirements to be covered by this assignment!
 
-Hint: Try to have a combination of explicit boundary values and implicit boundary values in your test cases.  As we learned, this is where most of the defects will reside!
+Hint: Try to have a combination of explicit boundary values and implicit boundary values and corner cases in your test cases.  As we learned, this is where most of the defects will reside!
 
 ## GoatGoatCar
 GoatGoatCar is going to be our way of determining the correct answer to the "Monty Hall Problem" (https://en.wikipedia.org/wiki/Monty_Hall_problem).  The Monty Hall Problem can be summarized as follows:
