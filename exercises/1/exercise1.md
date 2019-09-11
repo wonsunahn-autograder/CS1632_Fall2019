@@ -9,8 +9,6 @@ Test cases should mention all necessary preconditions, execution steps, and post
 
 It is expected that you actually execute the test plan in order to find the defects, along with some exploratory testing to determine how the system works and where defects might lie.  While you are not expected to find *all* of the defects, a reasonable test plan should definitely find at least two.  This is an intentionally target-rich environment.
 
-You should EMAIL me the completed test plan.  This must be in to me by the next class, although I highly recommend you work on it in class.
-
 You may ask me any questions you may have during class.  It's not graded.  Ask me anything.
 
 Remember, the template for test cases -
