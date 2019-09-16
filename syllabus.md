@@ -15,36 +15,39 @@ AFIST = _A Friendly Introduction to Software Testing_ by Bill Laboon
 
 * (Class 1) NO CLASS - LABOR DAY
 
-* (Class 2) Requirements and Defects
-  * READING: AFIST, Chapters 5 and 9
+* (Class 2) Requirements
+  * READING: AFIST, Chapters 5
 
 ## WEEK 3 (Week of 9 SEP)
 
-* (Class 1) Test Plans and Breaking Software
-
+* (Class 1) Test Plans, TM and Defects
+  * READING: AFIST, Chapters 6, 8-9
+  
 * (Class 2) EX1: Test Plans
 
 ## WEEK 4 (Week of 16 SEP)
 
-* (Class 1) Automated and Manual Testing, Unit Testing Part 1
-  * READING: AFIST, Chapter 12-13
+* (Class 1) Breaking Software, Smoke / Exploratory / Path-based Testing
+  * READING: AFIST, Chapters 7, 10-11
   
-* (Class 2) Unit Testing Part 2
-  * READING: AFIST, Chapter 14
+* (Class 2) Automated and Manual Testing, Unit Testing Part 1
+  * READING: AFIST, Chapter 12-13
+
 
 ## WEEK 5 (Week of 23 SEP)
 
-* (Class 1) EX2: Unit Testing
-
-* (Class 2) Test-driven Development
-  * READING: AFIST, Chapter 15
+* (Class 1) Unit Testing Part 2
+  * READING: AFIST, Chapter 14
+ 
+* (Class 2) EX2: Unit Testing
 
 ## WEEK 6 (Week of 30 SEP)
 
-* (Class 1) Writing Testable Code
-  * READING: AFIST, Chapter 16
+* (Class 1) Test-driven Development
+  * READING: AFIST, Chapter 15
 
-* (Class 2) EX3: Unit Testing and TDD
+* (Class 2) Writing Testable Code
+  * READING: AFIST, Chapter 16
 
 ## WEEK 7 (Week of 7 OCT)
 
@@ -63,7 +66,7 @@ _Note: Classes that are normally held on Monday are shifted to Tuesday on this w
 
 ## WEEK 9 (Week of 21 OCT)
 
-* (Class 1) EX4: Automated System Testing
+* (Class 1) EX3: Automated System Testing
 
 * (Class 2) Performance Testing, Part 1
   * READING: AFIST, Chapter 19
@@ -72,7 +75,7 @@ _Note: Classes that are normally held on Monday are shifted to Tuesday on this w
 
 * (Class 1) Performance Testing, Part 2
 
-* (Class 2) EX5: Performance Testing
+* (Class 2) EX4: Performance Testing
 
 ## WEEK 11 (Week of 4 NOV)
 
@@ -82,7 +85,7 @@ _Note: Classes that are normally held on Monday are shifted to Tuesday on this w
 
 ## WEEK 12 (Week of 11 NOV)
 
-* (Class 1) EX6: Static Analysis
+* (Class 1) EX5: Static Analysis
 
 * (Class 2) Developing and Managing a Testing Strategy 
 
@@ -105,7 +108,7 @@ _Note: Classes that are normally held on Monday are shifted to Tuesday on this w
 * (Class 1) Security Testing
   * READING: AFIST, Chapter 20
 
-* (Class 2) EX7: Penetration Testing
+* (Class 2) EX6: Penetration Testing
 
 ## WEEK 16 (Week of DEC 9)
 
