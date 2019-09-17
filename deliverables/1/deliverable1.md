@@ -11,7 +11,7 @@ If you still haven't found a partner, please post on the courseweb discussion bo
 
 There should be at least as many test cases as requirements, although I would normally expect several test cases per requirement.  As a general rule, I'd estimate that the number of test cases is at least 2x the number of requirements.  If the number of test cases is more than 3x the number of requirements, you are probably overtesting.
 
-Each requirement should have AT LEAST one test case associated with it, and each test case should have EXACTLY ONE requirement associated with it.  This can easily be checked via a traceability matrix (which you should also deliver).  In a real world scena
+Each requirement should have AT LEAST one test case associated with it, and each test case should have EXACTLY ONE requirement associated with it.  This can easily be checked via a traceability matrix (which you should also deliver).  In a real world scenario, one test case can test multiple requirements but, for the purposes of this assignment, please limit it to one requirement (the one that is tested primarily).
 
 Test cases should mention all necessary preconditions, input values, execution steps, output values, and postconditions.  Remember when they are necessary and when they are not.
 
