@@ -87,7 +87,7 @@ _Note: Classes that are normally held on Monday are shifted to Tuesday on this w
 
 * (Class 1) EX5: Static Analysis
 
-* (Class 2) Developing and Managing a Testing Strategy 
+* (Class 2) NetApp guest lecture on Continuous Integration 
 
 ## WEEK 13 (Week of 18 NOV)
 
