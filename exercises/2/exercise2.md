@@ -1,4 +1,4 @@
-# Unit Testing Exercise 3
+# Unit Testing Exercise 2
 
 ## Description
 
@@ -134,9 +134,8 @@ Please do a Text Submission to Courseweb with a link to the GitHub repository wh
 
 Example:
 
-John Doe
-Jane Doe
-
-https://github.com/wonsunahn/CS1632\_Fall2019/tree/master/exercises/2
+John Doe  
+Jane Doe  
+https://github.com/wonsunahn/CS1632_Fall2019/tree/master/exercises/2
 
 Please submit by Monday (9/30) 11:59 PM to get feedback.  
