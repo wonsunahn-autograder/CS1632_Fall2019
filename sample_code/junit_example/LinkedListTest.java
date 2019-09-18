@@ -120,6 +120,7 @@ public class LinkedListTest {
 		} catch (IllegalArgumentException e) {
 		}
 	}
+	
 	// --------------------------------------------------------------
 	// DELETE FROM FRONT TESTS
 	// --------------------------------------------------------------
