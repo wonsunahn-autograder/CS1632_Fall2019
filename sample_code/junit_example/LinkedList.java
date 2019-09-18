@@ -30,7 +30,10 @@ public class LinkedList<T> {
 		}
 	}
 	
-	public void addToFront(Node<T> toAdd) {
+	public void addToFront(Node<T> toAdd) throws IllegalArgumentException {
+		if(toAdd == null) {
+			throw new IllegalArgumentException();
+		}
 		if (_head == null) {
 			_head = toAdd;
 		} else {
@@ -94,6 +97,9 @@ public class LinkedList<T> {
 	}
 	
 	public void addToEnd(Node<T> toAdd) {
+		if(toAdd == null) {
+			throw new IllegalArgumentException();
+		}
 		
 		toAdd.setNext(null);
 		

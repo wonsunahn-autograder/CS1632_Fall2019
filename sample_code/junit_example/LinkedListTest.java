@@ -78,7 +78,7 @@ public class LinkedListTest {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void testAddToNoItemLL() {
+	public void testAddToTenItemLL() {
 		LinkedList<Integer> ll = new LinkedList<Integer>();
 		Node<Integer>[] nodes = new Node[10];
 		
@@ -110,6 +110,16 @@ public class LinkedListTest {
 		assertSame(ll.getFront(), testNode);
 	}
 	
+	//  Check that passing null to addToFront() results in an IllegalArgumentException	
+	@Test
+	public void testAddNullToNoItemLL() {
+		LinkedList<Integer> ll = new LinkedList<Integer>();
+		try {
+			ll.addToFront(null);
+			fail("Adding a null node should result in an IllegalArgumentException");
+		} catch (IllegalArgumentException e) {
+		}
+	}
 	// --------------------------------------------------------------
 	// DELETE FROM FRONT TESTS
 	// --------------------------------------------------------------
