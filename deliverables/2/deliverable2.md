@@ -97,7 +97,7 @@ Please review the grading_rubric.txt for details.
 
 ## Submission
 
-Each pairwise group will submit the deliverable once to courseweb, by one member of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 1". Please upload a PDF format of your report.
+Each pairwise group will submit the deliverable once to courseweb, by one member of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 2". Please upload a PDF format of your report.  Don't forget your github url.
 
 Nik, our TA, will record the score for both of you on courseweb, along with feedback on where points have been deducted. You and your partner will get the same score. If you feel otherwise, let me know.
 
