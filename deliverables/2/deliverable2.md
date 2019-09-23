@@ -1,15 +1,13 @@
 # CS 1632 - Software Quality Assurance
 Fall Semester 2019
 
-* DUE: TBD
+* DUE: October 16, 2019 11:59 PM
 
 ## Deliverable 2
 
 For this assignment, your group will write code and unit tests for an authorized reproduction of Coffee Maker Quest.  Groups can be made up of two people, selected by yourselves.  If you prefer to work alone, you can also do that.
 
 Requirements for this program are in the requirements.txt file in this directory.  In case of ambiguity, please see the original program as an example of what to display and how the system should work.  However, you should not code in defects!
-
-All code and tests should be on GitHub by the beginning of class on the due date.
 
 Code coverage should be at an absolute minimum of 80%.
 
@@ -95,5 +93,12 @@ For this project, you should endeavour to get a good sampling of different equiv
   * Includes functionality *and* code quality!
 * Test Code - 40%
 
+Please review the grading_rubric.txt for details.
+
+## Submission
+
+Each pairwise group will submit the deliverable once to courseweb, by one member of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 2". Please upload a PDF format of your report.  Don't forget your github url.
+
+Nik, our TA, will record the score for both of you on courseweb, along with feedback on where points have been deducted. You and your partner will get the same score. If you feel otherwise, let me know.
+
 Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
- 
