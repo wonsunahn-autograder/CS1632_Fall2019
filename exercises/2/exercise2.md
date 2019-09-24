@@ -4,7 +4,7 @@
 
 In this exercise, we will simulate the main Rent-A-Cat rental system software.  This is obviously a "toy" implementation of the vast and powerful Rent-A-Cat apparatus.
 
-I have created a framework for you for this exercise.  It is up to you to fill in the `returnCat()`, `rentCat()`, `listCats()` and `catExists()` methods, and write unit tests for them.  Each unit test should use doubles.  You may have unit tests which have stubs or mocks as well.
+I have created a framework for you for this exercise.  It is up to you to fill in the `returnCat()`, `rentCat()`, `listCats()` and `catExists()` methods, and write unit tests for them.  Unit tests must use doubles for the Cat object with appropriate stubbing.  I have intentionally inserted a defect on every Cat method such that an exception is fired if you try to use a real Cat object in any way during your unit testing!  Those defects are turned off when Cat is used within the main RentACat program.
 
 Rent-A-Cat rents cats to customers for various needs (mousing, companionship, homework help, etc.).  From the main menu, users may:
 
@@ -58,11 +58,11 @@ Closing up shop for the day!
 
 You should also write appropriate unit tests for each public method.  There should be at least one unit test per method, and a total of at least SIX unit tests.  You may group these however you like - (e.g., one unit test for three methods, and three for the last one; two unit tests for two methods, one unit test each for the other two; etc.)
 
-Note that while I have provided a TestRunner, I have NOT provided a Test file!  You will need to create the Test file as well as modify the TestRunner to include the correct classes.  You can view the CommandLineJunit subdirectory for an example of how to do this.
+Note that while I have provided a TestRunner, I only provided a skeleton Test file with the name RentACatTest!  You will need to fill in the Test file with test cases as well as modify the TestRunner to include the correct classes.  You can view the LinkedList sample code we discussed in class or code under the CommandLineJunit subdirectory for an example of how to do this.
 
 You should use test doubles/mocks for any references to classes other than the one under test (i.e., double or mock any Cat objects).  You may use an ArrayList of doubled objects (that is, you do not need to double ArrayList itself).
 
-You do not need to test any of the methods in the Cat class, although if you do find a defect there your team will get a bonus point.
+You do not need to test any of the methods in the Cat class since that is an external class that is beyond the unit we are trying to test.
 
 ## Running Unit Tests
 
@@ -93,37 +93,19 @@ Don't use "~" or other shortcuts when referring to the path that the `junit` and
 1. Check to see if junit works on your machine before starting to code.
 1. Don't write all the code and then write tests - write tests as you go along!  This way you will discover what is easy and hard to test, and shake out the problems as you go along.  Otherwise, you will be stuck trying to fix all of them at the very end, and may have to do some major code refactoring to get back to a reasonably testable system.
 1. Remember to _not_ double the class under test (i.e. RentACat), only classes that it depends upon.
-2. The easiest thing to do is assert against a return value, but you can also assert against attributes of an object.  For example:
-```
-@Test
-public void testChangeCatName() {
-   Cat c = new Cat("Bustopher Jones", 150.00);
-   String newName = "Growltiger";
-   c.setName(newName);
-   assertEquals(c.getName(), newName);
-}
-```
-3. If you are going to have to double an object inside a method, be sure to allow it to be passed in as an argument!  This is called _dependency injection_.  Example:
-```
-// BAD - how can we double Duck?
-public int lotsOfQuacks() {
-    Duck d = new Duck();
-    int numQuacks = 0;
-    for (int j = 0; j < 100; j++) {
-        numQuacks += d.quack();
+1. The easiest thing to do is assert against a return value, but you can also assert against attributes of an object.  For example:
+    ```
+    @Test
+    public void testChangeCatName() {
+       Cat c = new Cat("Bustopher Jones", 150.00);
+       String newName = "Growltiger";
+       c.setName(newName);
+       assertEquals(c.getName(), newName);
     }
-    return numQuacks;
-}
+    ```
+    You can also use the Mockito verify method to perform behavior verification.
+1. Try making use of the @Before and @After methods in your JUnit testing.  @Before and @After methods are invoked before and after each @Test method.  They are used to set up some program state required by preconditions and to tear down the setup.  In JUnit terminology, the set of objects with fixed state involved in the preconditions is called a Test Fixture.  The test fixture will work as a baseline for all tests in the test class and allow you to avoid repeating code.  Here you will create and initialize all objects you will be commonly using in your test cases, including all mock objects.
 
-// BETTER - dependency injection
-public int lotsOfQuacks(Duck d) {
-    int numQuacks = 0;
-    for (int j = 0; j < 100; j++) {
-        numQuacks += d.quack();
-    }
-    return numQuacks;
-}
-```
 * Try to ensure that you check not only for "happy path" cases but also edge cases.
 * Tests are usually grouped into whichever classes they are testing, and have a filename that has `Test` appended to the name.  For example, Foo.java would be tested by FooTest.java.
 * Testing println's or other output is difficult - try to have methods return Strings which are easier to test.  It is possible to test for I/O but it requires some extra steps - see Chapter 14, Section 6 of the textbook for instructions.
@@ -138,4 +120,4 @@ John Doe
 Jane Doe  
 https://github.com/wonsunahn/CS1632_Fall2019/tree/master/exercises/2
 
-Please submit by Monday (9/30) 11:59 PM to get feedback.  
+Please submit by Monday (9/30) 11:59 PM to get timely feedback. 
