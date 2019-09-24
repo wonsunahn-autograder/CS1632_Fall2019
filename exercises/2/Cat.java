@@ -19,6 +19,13 @@ public class Cat {
     String _name;
 
     /**
+     * Whether bug injection is turned on for the Cat class.
+     * Turn off before actual usage.  Only leave on during JUnit testing.
+     */
+
+    public static boolean _bugInjectionOn = true;
+    
+    /**
      * Constructor - creates a new Cat object
      * Note there are no checks that this ID is not taken by another
      * cat!  This is probably something that we would fix in a production
@@ -28,9 +35,12 @@ public class Cat {
      */
     
     public Cat(int id, String name) {
-	_rented = false;
-	_id = id;
-	_name = name;
+    	if (_bugInjectionOn) {
+    		throw new UnsupportedOperationException("Injected bug for Cat()");
+    	}
+    	_rented = false;
+    	_id = id;
+    	_name = name;
     }
 
     /**
@@ -38,7 +48,10 @@ public class Cat {
      */
 
     public void rentCat() {
-	_rented = true;
+    	if (_bugInjectionOn) {
+    		throw new UnsupportedOperationException("Injected bug for rentCat()");
+    	}
+    	_rented = true;
     }
 
     /**
@@ -46,7 +59,10 @@ public class Cat {
      */
 
     public void returnCat() {
-	_rented = false;
+    	if (_bugInjectionOn) {
+    		throw new UnsupportedOperationException("Injected bug for returnCat()");
+    	}
+    	_rented = false;
     }
 
     /**
@@ -55,7 +71,10 @@ public class Cat {
      */
 
     public String getName() {
-	return _name;
+    	if (_bugInjectionOn) {
+    		throw new UnsupportedOperationException("Injected bug for getName()");
+    	}
+    	return _name;
     }
 
     /**
@@ -64,7 +83,10 @@ public class Cat {
      */
 
     public int getId() {
-	return _id;
+    	if (_bugInjectionOn) {
+    		throw new UnsupportedOperationException("Injected bug for getId()");
+    	}
+    	return _id;
     }
 
     /**
@@ -73,7 +95,10 @@ public class Cat {
      */
 
     public boolean getRented() {
-	return _rented;
+    	if (_bugInjectionOn) {
+    		throw new UnsupportedOperationException("Injected bug for getRented()");
+    	}
+    	return _rented;
     }
 
     /**
@@ -83,7 +108,10 @@ public class Cat {
      */
 
     public String toString() {
-	return "ID " + _id + ". " + _name;
+    	if (_bugInjectionOn) {
+    		throw new UnsupportedOperationException("Injected bug for toString()");
+    	}
+    	return "ID " + _id + ". " + _name;
     }
     
 
