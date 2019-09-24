@@ -55,7 +55,7 @@ public class RentACat {
     
     public String listCats() {
     	// TODO
-        return "WRITE CODE FOR THIS";
+    	return "WRITE CODE FOR THIS";
     }
 
     /**
@@ -157,76 +157,79 @@ public class RentACat {
 		
 		while (keepGoing) {
 		    validCat = false;
-		    System.out.print("Option [1,2,3,4] >");
+		    System.out.print("Option [1,2,3,4] > ");
 		    try {
-			option = sc.nextInt();
-			switch (option) {
-			case 1:
-			    System.out.println("Cats for Rent");
-			    System.out.println(rc.listCats());
-			    break;
-			case 2:
-			    validCat = false;
-			    int catIdToRent;
-			    while (!validCat) {
-				System.out.print("Rent which cat? > ");
-				try {
-				    catIdToRent = sc.nextInt();
-				    Cat c = rc.getCat(catIdToRent);
-				    if (c == null) {
-					throw new NumberFormatException();
-				    } else if (c.getRented()) {
-					System.out.println("Sorry, " + c.getName() + " is not here!");
-					validCat = true;
-				    } else {
-					rc.rentCat(catIdToRent);
-					System.out.println(c.getName() + " has been rented.");
-					validCat = true;
+				option = sc.nextInt();
+				switch (option) {
+				case 1:
+				    System.out.println("Cats for Rent");
+				    System.out.print(rc.listCats());
+				    break;
+				case 2:
+				    validCat = false;
+				    int catIdToRent;
+				    while (!validCat) {
+						System.out.print("Rent which cat? > ");
+						try {
+						    catIdToRent = sc.nextInt();
+						    Cat c = rc.getCat(catIdToRent);
+						    if (c == null) {
+						    	throw new NumberFormatException();
+						    } else if (c.getRented()) {
+						    	System.out.println("Sorry, " + c.getName() + " is not here!");
+						    } else {
+								rc.rentCat(catIdToRent);
+								System.out.println(c.getName() + " has been rented.");
+								validCat = true;
+						    }
+						} catch (NumberFormatException nfex) {
+							System.out.println("Invalid cat ID.");
+						} catch (Exception ex) {
+						    System.out.println("Invalid cat ID.");
+						    sc.next();
+						}
 				    }
-				} catch (Exception nfex) {
-				    System.err.println("Invalid cat ID.");
-				}
-			    }
-			    break;
-			case 3:
-			    validCat = false;
-			    int catIdToReturn;
-			    while (!validCat) {
-				System.out.print("Return which cat? > ");
-				try {
-				    catIdToReturn = sc.nextInt();
-				    Cat c = rc.getCat(catIdToReturn);
-				    if (c == null) {
-					throw new NumberFormatException();
-				    } else if (!c.getRented()) {
-					System.out.println(c.getName() + " is already here!");
-					validCat = true;
-				    } else {
-					rc.returnCat(catIdToReturn);
-					System.out.println("Welcome back," + c.getName() + "!");
-					validCat = true;
+				    break;
+				case 3:
+				    validCat = false;
+				    int catIdToReturn;
+				    while (!validCat) {
+						System.out.print("Return which cat? > ");
+						try {
+						    catIdToReturn = sc.nextInt();
+						    Cat c = rc.getCat(catIdToReturn);
+						    if (c == null) {
+						    	throw new NumberFormatException();
+						    } else if (!c.getRented()) {
+								System.out.println(c.getName() + " is already here!");
+						    } else {
+								rc.returnCat(catIdToReturn);
+								System.out.println("Welcome back," + c.getName() + "!");
+								validCat = true;
+						    }
+						} catch (NumberFormatException nfex) {
+							System.out.println("Invalid cat ID.");
+						} catch (Exception ex) {
+						    System.out.println("Invalid cat ID.");
+						    sc.next();
+						}
 				    }
-				} catch (Exception nfex) {
-				    System.err.println("Invalid cat ID.");
-				    sc.next();
+		
+				    break;
+				case 4:
+				    keepGoing = false;
+				    break;
+				default:
+				    throw new NumberFormatException();
 				}
-			    }
-	
-			    break;
-			case 4:
-			    keepGoing = false;
-			    break;
-			default:
-			    throw new NumberFormatException();
-			}
 		    } catch (Exception nfex) {
-			System.err.println("Please enter 1, 2, 3 or 4");
-			System.err.println("1. See list of cats for rent");
-			System.err.println("2. Rent a cat to a customer");
-			System.err.println("3. Return a cat");
-			System.err.println("4. Quit");
-			// Clear out the non-int in the scanner
-			sc.next();
+				System.err.println("Please enter 1, 2, 3 or 4");
+				System.err.println("1. See list of cats for rent");
+				System.err.println("2. Rent a cat to a customer");
+				System.err.println("3. Return a cat");
+				System.err.println("4. Quit");
+				// Clear out the non-int in the scanner
+				sc.next();
 		    }
 		}
 	
