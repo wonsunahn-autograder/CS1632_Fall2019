@@ -91,7 +91,7 @@ Don't use "~" or other shortcuts when referring to the path that the `junit` and
 ## Tips
 
 1. Check to see if junit works on your machine before starting to code.
-1. Don't write all the code and then write tests - write tests as you go along!  This way you will discover what is easy and hard to test, and shake out the problems as you go along.  Otherwise, you will be stuck trying to fix all of them at the very end, and may have to do some major code refactoring to get back to a reasonably testable system.
+1. We will try to apply the Test Driven Development (TDD) model here.  Try writing the test case(s) FIRST before writing the code for a feature.  This way, you will always have 100% test coverage for the code you have written.  Hence, if you break any part of it in the course of adding a feature or refactoring your code, you will know immediately.  Also, you will be forced to write code in a testable way.  Otherwise, if you test at the very end, you may have to do some major code refactoring to get to a reasonably testable system.
 1. Remember to _not_ double the class under test (i.e. RentACat), only classes that it depends upon.
 1. The easiest thing to do is assert against a return value, but you can also assert against attributes of an object.  For example:
     ```
