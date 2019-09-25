@@ -34,15 +34,11 @@ Rooms display correctly:             ____ / 5
 
 * Test Code - 40% of grade
 
-Test happy path for methods:         ____ / 8
+At least 3 test doubles:             ____ / 15
 
-Edge cases tested:                   ____ / 8
+At least 3 stubs:                    ____ / 15
 
-At least 3 test doubles:             ____ / 8
-
-At least 3 stubs:                    ____ / 8
-
-Comments included & descriptive:     ____ / 8
+Comments included & descriptive:     ____ / 10
 
 ***
 

@@ -9,24 +9,21 @@ For this assignment, your group will write code and unit tests for an authorized
 
 Requirements for this program are in the requirements.txt file in this directory.  In case of ambiguity, please see the original program as an example of what to display and how the system should work.  However, you should not code in defects!
 
-Code coverage should be at an absolute minimum of 80%.
+Code coverage should be at an absolute minimum of 80% for each of your classes.
 
 Tests should be written in JUnit.  You should test every public method _except_ main.  For each method that you test, ensure that you get a variety of different equivalence classes!  Think about different edge and base cases, what the happy path is, etc.  
 
 ## Format
 You should turn in a title page with:
 * Your name
-* The URL of your code and tests on GitHub or a similar repository
+* The URL of your code and tests on GitHub
 * The title "CS 1632 - DELIVERABLE 2: Unit Testing and Code Coverage"
-
 
 Add a short ( < 1 page ) description of issues you faced when writing this code and tests.  If any tests you wrote fail, they should be included here, along with why you think that they are failing.
 
 After this, ON A SEPARATE PAGE, include a screen shot of the executed unit tests.  Note that not all tests have to pass!  However, if a test doesn't pass, it should be included in the concerns section above.
 
-ON A SEPARATE PAGE, include either a screenshot or output from a code coverage tool of your tests and the object they cover.
-
-There is no need to print out the code.  It should be on GitHub (or a similar publicly-accessible version control system such as BitKeeper) BY THE BEGINNING OF CLASS.
+ON A SEPARATE PAGE, include either a screenshot or output from a code coverage tool of your tests and the object they cover.  The screenshot should show coverage percentage for each class.  Please review exercise 2 if you need reminding of how that looks like.
 
 At least three (3) unit tests should use test doubles.
 
@@ -34,7 +31,7 @@ At least three (3) unit tests should use stubbing of methods.
 
 I expect unit tests for AT LEAST each public method that returns a value (excluding the main method), using a variety of assertions and looking at different failure modes and edge cases.  Keep in mind some of the things we learned when doing manual testing; you should be cognizant of equivalence classes, boundary values, etc. and focus on them.
 
-As a general guideline, code coverage should exceed 80%.
+Code coverage should exceed 80% for each class you unit test.
 
 The program should use appropriate object-oriented design.
 
@@ -98,6 +95,8 @@ Please review the grading_rubric.txt for details.
 ## Submission
 
 Each pairwise group will submit the deliverable once to courseweb, by one member of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 2". Please upload a PDF format of your report.  Don't forget your github url.
+
+IMPORTANT: Please keep the github private and add the following users as collaborators: nikunjgoel95, wonsunahn.
 
 Nik, our TA, will record the score for both of you on courseweb, along with feedback on where points have been deducted. You and your partner will get the same score. If you feel otherwise, let me know.
 
