@@ -68,25 +68,40 @@ You do not need to test any of the methods in the Cat class since that is an ext
 
 If you do this in an IDE such as Eclipse, or with a build tool like Gradle, this can be handled automatically.  HOWEVER, please do not do this!  I want you to realize what is happening "behind the scenes".
 
-First, we need to create a test runner.  I have created a simple one (TestRunner.java) for you (which you should modify to work with the RentACat class).  You should create your own unit test file for RentACat called RentACatTest.java.  The example files are located in the CommandLineJunit subdirectory under the exercises subdirectory in the class repo.  This will also include the two jar files you will need to use junit.
+1. First let's do a sanity check to see if Java is installed properly on your machine.  For Windows try doing:
+    ```
+    run.bat
+    ```
+    For Mac or Linux, try doing:
+    ```
+    make
+    ```
+    Or if that doesn't work (because make is not installed), try doing:
+    ```
+    bash run.sh
+    ```
+    If successful, you will get a message "ALL TESTS PASSSED".  But hold your horses, we aren't done yet!
+    
+2. We haven't yet added our RentACatTest test class to the list of classes tested by JUnit.  There is a simple boilerplate test runner I created for you (TestRunner.java).  It iterates over a list of test classes and invokesJUnitCore.runClasses on each of them.  Our RentACatTest is not on that list.  You need to modify it so that it is.  Read the test runner for NoogieTest and CoogieTest under CommandLineJunit/ to see how.
 
-To run it, you will need to compile it and ensure that the junit and hamcrest jars are in your classpath.
+    If successful, you should get the following message:
+    ```
+    initializationError(RentACatTest): No runnable methods
 
-```
-$ javac -cp ./junit-4.12.jar:./hamcrest-core-1.3.jar:./mockito-core-1.10.19.jar:./objenesis-2.4.jar *.java
+    !!! - At least one failure, see above.
+    ```
+    This is telling you that there are no test cases inside RentACatTest, which takes us to the next step.
 
-$ java -cp .:./junit-4.12.jar:./hamcrest-core-1.3.jar:./mockito-core-1.10.19.jar:./objenesis-2.4.jar TestRunner
-testShouldFail(NoogieTest): expected null, but was:<java.lang.Object@22d8cfe0>
-testMeowAndBarkAreEqualWillFail(CoogieTest): expected:<[Meow]> but was:<[Bark]>
-
-!!! - At least one failure, see above.
-```
-
-You will need to write your own test files, of course (you may use NoogieTest and CoogieTest as basic templates).
-
-Replace ":" with ";" on Windows machines ( `java -cp .;./junit-4.12.jar;./hamcrest-core-1.3.jar TestRunner` ) .  If you are using Windows 7, you will also need to put the classpath argument entirely in quotes ( `java -cp ".;./junit-4.12.jar;./hamcrest-core-1.3.jar" TestRunner` )
-
-Don't use "~" or other shortcuts when referring to the path that the `junit` and `hamcrest` jar files live.  Your Java files may compile but then won't run - apparently the `-cp` option in `javac` parses paths different than `java`.  This is because LOL programming.
+3. Now you are ready to add test cases to RentACatTest.  Add a very simple test case that always succeeds:
+    ```
+    @Test
+    public void testShouldPass() {
+        assertNull(null);
+    }
+    ```
+    Now you see the message "ALL TESTS PASSED" again.  Yes!
+    
+4. Now you are ready to start writing the RentACatTest class for real.  Start by adding very simple tests to gain confidence.  Next, try adding more complex cases that require Cat objects.  For that, you will have to modify setUp() to create some Cat test doubles with proper stubs.  We learned how to do that in class.  If you are still unsure, look at the LinkedListTest sample code or the NoogieTest and CoogieTest under the CommandLineJunit/ directory.
 
 ## Tips
 
