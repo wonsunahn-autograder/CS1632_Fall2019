@@ -25,8 +25,6 @@ After this, ON A SEPARATE PAGE, include a screen shot of the executed unit tests
 
 ON A SEPARATE PAGE, include either a screenshot or output from a code coverage tool of your tests and the object they cover.  The screenshot should show coverage percentage for each class.  Please review exercise 2 if you need reminding of how that looks like.
 
-There is no need to print out the code.  It should be on GitHub (or a similar publicly-accessible version control system such as BitKeeper) BY THE BEGINNING OF CLASS.
-
 At least three (3) unit tests should use test doubles.
 
 At least three (3) unit tests should use stubbing of methods.
