@@ -120,12 +120,19 @@ John Doe
 Jane Doe  
 https://github.com/wonsunahn/CS1632_Fall2019/tree/master/exercises/2
 
-In the repository, also add a screenshot of code coverage stats given by your IDE of choice and name it code_coverage.png. Example:
+In the repository, beside your code, please add the following two items.
 
-https://github.com/wonsunahn/CS1632_Fall2019/blob/master/exercises/2/code_coverage.png
+1. Add a screenshot of the command line output from unit testing and name it unit_test.png.  Example:
 
-I used Eclipse to generate the screenshot.  Here is the user guide: https://www.eclemma.org/userdoc/launching.html.  It is just a click of a button and requires no extra installation.
-My screenshot shows 100% code coverage for the public methods we tested.  You don't have to have 100% coverage for this exercise but you will have coverage requirements for your deliverable.
+    https://github.com/wonsunahn/CS1632_Fall2019/blob/master/exercises/2/unit_test.png
+
+    Don't mind the WARNINGs in the screenshot.  It is just telling you the Mockito library is trying to use some features of reflection that is disallowed in more recent versions of the JRE.  The important part is that "ALL TESTS PASSED".  You want to get that for this exercise and also your delivarable.
+
+1. Add a screenshot of code coverage stats given by your IDE of choice and name it code_coverage.png. Example:
+
+    https://github.com/wonsunahn/CS1632_Fall2019/blob/master/exercises/2/code_coverage.png
+
+    I used Eclipse to generate the screenshot.  Here is the user guide: https://www.eclemma.org/userdoc/launching.html.  It is just a click of a button and requires no extra installation.  My screenshot shows 100% code coverage for the public methods we tested.  You don't have to have 100% coverage for this exercise but you will have coverage requirements for your deliverable.
 
 Please submit by Monday (9/30) 11:59 PM to get timely feedback.
 
