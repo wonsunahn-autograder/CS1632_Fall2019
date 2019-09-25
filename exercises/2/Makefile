@@ -7,7 +7,7 @@
 SRC_DIR=./
 
 # This is the path to your JUnit jars and such.
-JUNIT_DIR=./
+JUNIT_DIR=./CommandLineJunit/
 
 # This is the path to your test directory.
 # Example: java/test
@@ -28,7 +28,7 @@ CLASS_PATH_RUN=$(JUNIT_DIR)hamcrest-core-1.3.jar:$(CLASS_PATH_COMPILE):$(SRC_DIR
 RUNNER=TestRunner
 
 # ADD NEW FILES to compile here.
-COMPILE_TARGETS=$(SRC_DIR)Badger.java $(TEST_DIR)CoogieTest.java $(SRC_DIR)Noogie.java $(TEST_DIR)NoogieTest.java $(TEST_DIR)TestRunner.java
+COMPILE_TARGETS=$(SRC_DIR)Cat.java $(TEST_DIR)RentACat.java $(TEST_DIR)RentACatTest.java $(TEST_DIR)TestRunner.java
 
 # Testing targets.
 # Their directory will be on the Class Path.
