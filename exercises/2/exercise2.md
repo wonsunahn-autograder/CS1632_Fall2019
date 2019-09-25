@@ -120,4 +120,10 @@ John Doe
 Jane Doe  
 https://github.com/wonsunahn/CS1632_Fall2019/tree/master/exercises/2
 
-Please submit by Monday (9/30) 11:59 PM to get timely feedback. 
+In the repository, also add a screenshot of code coverage stats given by your IDE of choice and name it code_coverage.png (Example: https://github.com/wonsunahn/CS1632_Fall2019/blob/master/exercises/2/code_coverage.png).
+I used Eclipse to generate the screenshot.  A user manual is in https://www.eclemma.org/userdoc/launching.html.  It is just a click of a button and requires no extra installation.
+My screenshot shows 100% code coverage for the public methods we tested.  You don't have to have 100% coverage for this exercise but you will have coverage requirements for your deliverable.
+
+Please submit by Monday (9/30) 11:59 PM to get timely feedback.
+
+IMPORTANT: Please keep the github private and add the following users as collaborators: nikunjgoel95, wonsunahn
