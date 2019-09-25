@@ -35,9 +35,6 @@ public class Cat {
      */
     
     public Cat(int id, String name) {
-    	if (_bugInjectionOn) {
-    		throw new UnsupportedOperationException("Injected bug for Cat()");
-    	}
     	_rented = false;
     	_id = id;
     	_name = name;
