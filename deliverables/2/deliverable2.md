@@ -23,7 +23,7 @@ Add a short ( < 1 page ) description of issues you faced when writing this code 
 
 After this, ON A SEPARATE PAGE, include a screen shot of the executed unit tests.  Note that not all tests have to pass!  However, if a test doesn't pass, it should be included in the concerns section above.
 
-ON A SEPARATE PAGE, include either a screenshot or output from a code coverage tool of your tests and the object they cover.
+ON A SEPARATE PAGE, include either a screenshot or output from a code coverage tool of your tests and the object they cover.  The screenshot should show coverage percentage for each class.  Please review exercise 2 if you need reminding of how that looks like.
 
 There is no need to print out the code.  It should be on GitHub (or a similar publicly-accessible version control system such as BitKeeper) BY THE BEGINNING OF CLASS.
 
@@ -96,7 +96,9 @@ Please review the grading_rubric.txt for details.
 
 ## Submission
 
-Each pairwise group will submit the deliverable once to courseweb, by one member of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 2". Please upload a PDF format of your report.  Don't forget your github url.  IMPORTANT: Please keep the github private and add the following users as collaborators: nikunjgoel95, wonsunahn.
+Each pairwise group will submit the deliverable once to courseweb, by one member of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 2". Please upload a PDF format of your report.  Don't forget your github url.
+
+IMPORTANT: Please keep the github private and add the following users as collaborators: nikunjgoel95, wonsunahn.
 
 Nik, our TA, will record the score for both of you on courseweb, along with feedback on where points have been deducted. You and your partner will get the same score. If you feel otherwise, let me know.
 
