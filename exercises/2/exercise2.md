@@ -107,7 +107,7 @@ If you do this in an IDE such as Eclipse, or with a build tool like Gradle, this
 
 1. Check to see if junit works on your machine before starting to code.
 1. We will try to apply the Test Driven Development (TDD) model here.  Try writing the test case(s) FIRST before writing the code for a feature.  This way, you will always have 100% test coverage for the code you have written.  Hence, if you break any part of it in the course of adding a feature or refactoring your code, you will know immediately.  Also, you will be forced to write code in a testable way.  Otherwise, if you test at the very end, you may have to do some major code refactoring to get to a reasonably testable system.
-1. Remember to _not_ double the class under test (i.e. RentACat), only classes that it depends upon.
+1. Remember to _not_ double the class under test (i.e. RentACat), only classes that it depends upon (i.e. Cat).  In fact, if you don't double Cat and use the actual Cat objects, your tests will most likely fail.  I have injected artificial defects into the Cat class to emulate an external class that hasn't been completely written yet.
 1. The easiest thing to do is assert against a return value, but you can also assert against attributes of an object.  For example:
     ```
     @Test
@@ -120,7 +120,6 @@ If you do this in an IDE such as Eclipse, or with a build tool like Gradle, this
     ```
     You can also use the Mockito verify method to perform behavior verification.
 1. Try making use of the @Before and @After methods in your JUnit testing.  @Before and @After methods are invoked before and after each @Test method.  They are used to set up some program state required by preconditions and to tear down the setup.  In JUnit terminology, the set of objects with fixed state involved in the preconditions is called a Test Fixture.  The test fixture will work as a baseline for all tests in the test class and allow you to avoid repeating code.  Here you will create and initialize all objects you will be commonly using in your test cases, including all mock objects.
-1. You should never use actual Cat objects while testing RentACat!  Any dependent external classes should be mocked.  I have injected artificial defects into the Cat class so if you try using those, your tests will fail for sure.
 
 * Try to ensure that you check not only for "happy path" cases but also edge cases.
 * Tests are usually grouped into whichever classes they are testing, and have a filename that has `Test` appended to the name.  For example, Foo.java would be tested by FooTest.java.
