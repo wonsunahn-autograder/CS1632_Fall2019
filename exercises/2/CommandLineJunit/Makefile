@@ -25,18 +25,16 @@ CLASS_PATH_RUN=$(JUNIT_DIR)hamcrest-core-1.3.jar:$(CLASS_PATH_COMPILE):$(SRC_DIR
 #
 # Would need to add the runner to COMPILE_TARGETS
 # if you're wanting to use your own.
-RUNNER=org.junit.runner.JUnitCore
+RUNNER=TestRunner
 
 # ADD NEW FILES to compile here.
-COMPILE_TARGETS=$(SRC_DIR)Badger.java $(TEST_DIR)CoogieTest.java $(SRC_DIR)Noogie.java $(TEST_DIR)NoogieTest.java
+COMPILE_TARGETS=$(SRC_DIR)Badger.java $(TEST_DIR)CoogieTest.java $(SRC_DIR)Noogie.java $(TEST_DIR)NoogieTest.java $(TEST_DIR)TestRunner.java
 
 # Testing targets.
 # Their directory will be on the Class Path.
-TEST_TARGETS=CoogieTest NoogieTest
-
 
 run: build
-	java -cp $(CLASS_PATH_RUN) $(RUNNER) $(TEST_TARGETS) || true
+	java -cp $(CLASS_PATH_RUN) $(RUNNER) || true
 
 build:
 	javac -cp $(CLASS_PATH_COMPILE) $(COMPILE_TARGETS)
