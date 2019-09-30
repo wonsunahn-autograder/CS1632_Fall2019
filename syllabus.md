@@ -51,8 +51,6 @@ AFIST = _A Friendly Introduction to Software Testing_ by Bill Laboon
 
 ## WEEK 7 (Week of 7 OCT)
 
-_Note: Classes that are normally held on Monday are shifted to Tuesday on this week due to the Monday holiday._
-
 * (Class 1) Pairwise and Combinatorial Testing
   * READING: AFIST, Chapter 17
 

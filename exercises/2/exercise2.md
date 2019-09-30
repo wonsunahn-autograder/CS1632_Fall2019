@@ -147,7 +147,7 @@ In the repository, beside your code, please add the following two items.
 
     https://github.com/wonsunahn/CS1632_Fall2019/blob/master/exercises/2/code_coverage.png
 
-    I used Eclipse to generate the screenshot.  Here is the user guide: https://www.eclemma.org/userdoc/launching.html.  It is just a click of a button and requires no extra installation.  My screenshot shows 100% code coverage for the public methods we tested.  You don't have to have 100% coverage for this exercise but you will have coverage requirements for your deliverable.
+    I used Eclipse to generate the screenshot.  Here is the user guide: https://www.eclemma.org/userdoc/launching.html.  It is just a click of a button and requires no extra installation.  My screenshot shows 100% code coverage for the public methods we tested.  You don't have to have 100% coverage for this exercise but you will have coverage requirements for your deliverable.  For those of you who are new to eclipse, you need to include the four JAR files under CommandLineJUnit/ as external JARs for it to compile.  You need to go to project properties > Java Build Path > Libraries and Add JARs or Add External JARs.  Also, don't create module-info.java when prompted.
 
 Please submit by Monday (9/30) 11:59 PM to get timely feedback.
 
