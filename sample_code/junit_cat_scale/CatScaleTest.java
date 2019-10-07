@@ -6,11 +6,11 @@ import org.junit.Before;
 import org.mockito.*;
 
 public class CatScaleTest {
-	@Test
+    @Test
     public void testReport() {
-		CatScale scale = new CatScale();
-		Cat cat = Mockito.mock(Cat.class);
-		Mockito.when(cat.getWeight()).thenReturn(80);
+	CatScale scale = new CatScale();
+	Cat cat = Mockito.mock(Cat.class);
+	Mockito.when(cat.getWeight()).thenReturn(80);
     	assertEquals(scale.report(cat), "Overweight");
     	Mockito.verify(cat).getWeight();
     }
