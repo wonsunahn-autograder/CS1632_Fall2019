@@ -4,7 +4,7 @@ public class CatScale {
 		if(cat.getWeight() > 40) {
 			return "Overweight";
 		}
-		else if(cat.getWeight() > 10) {
+		else if(cat.getWeight() < 10) {
 			return "Underweight";
 		}
 		else {
