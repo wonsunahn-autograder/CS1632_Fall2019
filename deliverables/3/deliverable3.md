@@ -5,47 +5,27 @@ DUE: TBD
 
 ## Deliverable 3
 
-For this assignment, you and a partner will write systems-level, automated black-box tests for a web app using Selenium and JUnit. 
-
-Test code should be on a private repository and GitHub, and the TA and myself should be added as collaborators by the beginning of class on the due date.
-
-Please use the included TestRunner and Selenium jars.  You may modify the TestRunner class to include any test classes that you have created.  These are _not_ the latest Selenium jars, but they are guaranteed to work together.
+For this assignment, you and a partner will write systems-level, automated black-box tests for a web app using the Katalon Automation Recorder, a revamped variant of the Selenium IDE. 
 
 The web app is located here: https://cs1632ex.herokuapp.com/
 
-This is an Elixir/Phoenix application.  If you like, you may look at the source code here: https://github.com/laboon/cs1632d3ex.  However, this is NOT necessary (and technically would make this grey-box testing).  I do not expect you to learn yet another language for this course.  It might be interesting for you to see Elixir code, though (it is slightly more useful than learning Befunge).
-
 ## Format
 Everyone should have a title page with:
-* Your name
+* Your names
 * The URL of your code and tests on GitHub
-* The title "CS 1632 - DELIVERABLE 3: Unit Testing"
+* The title "CS 1632 - DELIVERABLE 3: Automated Web Testing"
 
 For the summary, add a description of issues you faced when writing these tests and problems you would expect going forward based on your experiences.  If any tests you wrote fail (some should!), they should be included here.
 
-After this, there should be a printout or screen shot of the test execution results.
+ON A SEPARATE PAGE, there should be a printout of the test execution results shown in the Log window.  Just copy and paste it into your document.
 
-There is no need to print out the code.  It should be shared with me and the TA (i.e., we have been added as collaborators) on GitHub BY THE BEGINNING OF CLASS.
+ON A SEPARATE PAGE, there should be screenshots of the defects you found, along with a defect report below each screenshot.  Screenshots are readily available if you click on the Screenshots window tab beside the Log window tab after running the test suite.  You can download individual screenshots in the .png format by clicking on each thumbnail.  The defect report should contain all necessary components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.
 
-The JUnit tests shall have a description (a few sentences at most) of what they are testing written in the comments above the particular test. See RedditTest.java in the sample_code directory for an example.
+ON A SEPARATE PAGE, write the traceability matrix based on the requirements and test cases.
 
-Remember these are USER-level systems tests; comments should describe tests in a way that an intelligent user of the software would understand.  Even though we are using JUnit, these are _not_ unit tests.  Remember the differences between system-level tests and unit tests!
+There is no need to print out the code.  It should be shared with me and the TA on GitHub.  The code should be a saved Katalon test suite.  Note that this should be an HTML file.  Please make the test case names descriptive!
 
-There should be a bare minimum of twenty tests, checking various base, edge, and corner cases.  There is a maximum of thirty tests.  However, do not focus on the number of tests too heavily; I am more concerned that you cover a broad variety of cases, check the requirements, and ones which are focused and yet still likely to find defects.
-
-## Note on Selenium Drivers
-
-Please use the following Selenium jars.  They are also included in this directory in the repository.
-
-2.52 Selenium Server jar: http://selenium-release.storage.googleapis.com/2.52/selenium-server-standalone-2.52.0.jar
-
-2.52 Java bindings jar: http://selenium-release.storage.googleapis.com/2.52/selenium-java-2.52.0.zip
-
-## Note on Firefox / Selenium in Windows
-
-To open the Selenium IDE from Firefox in Windows, right click the top bar of firefox, between the open tabs and the minimize button. Click "Menu Bar" so the menu bar shows up in the top left corner. Under "Tools" is "Selenium IDE".
-
-Alternatively, "ctrl+alt+s" while in the Firefox window should also bring up the IDE.
+There should be a bare minimum of twenty tests, checking various base, edge, and corner cases.  There is a maximum of thirty tests.  However, do not focus on the number of tests too heavily; I am more concerned that you cover all the requirements and check a broad variety of cases based on equivalence classes.
 
 ## Requirements
 
@@ -63,15 +43,25 @@ You may want to do some exploratory testing first to see what kind of issues are
 
 ## Traceability Matrix
 
-Please make a traceability matrix (just as in the first deliverable).  Tests should be identified by the name of the test case method (e.g., `public void testFoo()` should be indicated on the matrix as `testFoo`).
+Please make a traceability matrix (just as in the first deliverable).  Tests should be identified by the name of the test case.
 
 ## Grading
-* Summary and Testing concerns - 5% 
-* Screen shot or printout of test results - 5%
-* Proper comment descriptions of tests - 10%
-* JUnit Tests - 45%
-* Defect reports - 25%
+* Summary and Testing concerns - 10% 
+* Printout out of execution log - 5%
+* Defect screenshots and reports - 15%
 * Traceability matrix - 10%
+* Katalon tests - 45%
+* Defects are valid - 15%
 
-Please feel free to email me or come to office hours to discuss any problems you have. 
+Please review grading\_rubric.txt for details.
+
+## Submission
+
+Each pairwise group will submit the deliverable once to courseweb, by one member of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 3". Please upload a PDF format of your report. Don't forget your github url.
+
+IMPORTANT: Please keep the github private and add the following users as collaborators: nikunjgoel95, wonsunahn.
+
+Nik, our TA, will record the score for both of you on courseweb, along with feedback on where points have been deducted. You and your partner will get the same score. If you feel otherwise, let me know.
+
+Please post on the discussion board, or email me at wahn@pitt.edu, or come to office hours to discuss any problems you have.
  
