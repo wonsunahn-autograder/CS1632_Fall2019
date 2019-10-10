@@ -92,8 +92,8 @@ AFIST = _A Friendly Introduction to Software Testing_ by Bill Laboon
 * (Class 1) Stochastic and Property-Based Testing
   * READING: AFIST, Chapter 18 
 
-* (Class 2) Interacting With Stakeholders
-  * READING: AFIST, Chapter 21
+* (Class 2) Security Testing
+  * READING: AFIST, Chapter 20
 
 ## WEEK 14 (Week of 25 NOV)
 
@@ -103,13 +103,10 @@ AFIST = _A Friendly Introduction to Software Testing_ by Bill Laboon
 
 ## WEEK 15 (Week of DEC 2)
 
-* (Class 1) Security Testing
-  * READING: AFIST, Chapter 20
+* (Class 1) EX6: Penetration Testing
 
-* (Class 2) EX6: Penetration Testing
+* (Class 2) MIDTERM 2 (TBD. Could be pushed to finals week depending on progress.)
 
 ## WEEK 16 (Week of DEC 9)
 
-_Note: The exact date and time of midterm 2 will be determined when the exam schedule comes out._
-
-* (Class 1) MIDTERM 2
+* Finals week
