@@ -148,6 +148,8 @@ In the repository, beside your code, please add the following two items.
     https://github.com/wonsunahn/CS1632_Fall2019/blob/master/exercises/2/code_coverage.png
 
     I used Eclipse to generate the screenshot.  Here is the user guide: https://www.eclemma.org/userdoc/launching.html.  It is just a click of a button and requires no extra installation.  My screenshot shows 100% code coverage for the public methods we tested.  You don't have to have 100% coverage for this exercise but you will have coverage requirements for your deliverable.  For those of you who are new to eclipse, you need to include the four JAR files under CommandLineJUnit/ as external JARs for it to compile.  You need to go to project properties > Java Build Path > Libraries and Add JARs or Add External JARs.  Also, don't create module-info.java when prompted.
+    
+    When you run the code coverage tool, you need to run TestRunner.java (modified to run your JUnit test class), not RentACat.java.  You can do that by clicking on and highlighting TestRunner.java before clicking on the code coverage button.  Alternatively, you can right click on TestRunner.java and click on the "Coverage as" item in the menu that pops up.  This is important.  If you run RentACat.java, you will be getting the code coverage while playing the game.
 
 Please submit by Monday (9/30) 11:59 PM to get timely feedback.
 
