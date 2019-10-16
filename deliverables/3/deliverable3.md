@@ -1,7 +1,7 @@
 # CS 1632 - Software Quality Assurance
 Fall Semester 2019
 
-DUE: TBD
+DUE: October 28, 2019 11:59 PM
 
 ## Deliverable 3
 
@@ -17,15 +17,15 @@ Everyone should have a title page with:
 
 For the summary, add a description of issues you faced when writing these tests and problems you would expect going forward based on your experiences.  If any tests you wrote fail (some should!), they should be included here.
 
-ON A SEPARATE PAGE, there should be a printout of the test execution results shown in the Log window.  Just copy and paste it into your document.
-
-ON A SEPARATE PAGE, there should be screenshots of the defects you found, along with a defect report below each screenshot.  Screenshots are readily available if you click on the Screenshots window tab beside the Log window tab after running the test suite.  You can download individual screenshots in the .png format by clicking on each thumbnail.  The defect report should contain all necessary components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.
-
 ON A SEPARATE PAGE, write the traceability matrix based on the requirements and test cases.
+
+ON A SEPARATE PAGE, copy and paste the printout of the test execution results shown in the Log window.
+
+ON A SEPARATE PAGE, write a defect report.  There should be at least 3 defects.  Each defect should contain all necessary components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.  Also, below each defect report, attach a screenshot of the defect.  Screenshots are readily available if you click on the Screenshots window tab beside the Log window tab after running the test suite.  You can download individual screenshots in the .png format by clicking on each thumbnail.
 
 There is no need to print out the code.  It should be shared with me and the TA on GitHub.  The code should be a saved Katalon test suite.  Note that this should be an HTML file.  Please make the test case names descriptive!
 
-There should be a bare minimum of twenty tests, checking various base, edge, and corner cases.  There is a maximum of thirty tests.  However, do not focus on the number of tests too heavily; I am more concerned that you cover all the requirements and check a broad variety of cases based on equivalence classes.
+There should be a bare minimum of 10 tests, checking various base, edge, and corner cases.  There is a maximum of 20 tests.  However, do not focus on the number of tests too heavily; I am more concerned that you cover all the requirements and check a broad variety of cases based on equivalence classes.
 
 ## Requirements
 
