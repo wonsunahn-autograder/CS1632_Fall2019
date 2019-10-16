@@ -8,7 +8,7 @@ https://www.reddit.com/r/cats/
 
 It was chosen because it is a nice safe subreddit which is policed pretty well.  Besides, it's cats.
 
-I recommend you try a minimum of six tests, one for each requirement listed in requirements.md.  
+I recommend you try a minimum of seven tests, one for each requirement listed in requirements.md.  
 
 Remember, each test must end with an assertion!  The list of available assertions and other commands are available at:
 
