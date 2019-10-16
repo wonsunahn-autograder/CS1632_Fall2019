@@ -39,7 +39,11 @@ If you are interested in trying out the Java (WebDriver + JUnit) code exported f
    cd Mac
    run.sh
    ```
-1. If you are running Linux, let me know and I'll try to help you.
+1. If you are running Linux:
+   ```
+   cd Linux
+   run.sh
+   ```
 
 The above will compile and execute TestRunner.java which tests the SearchSmellyCat.java JUnit test class.  It is code exported from the last test case in the Reddit Cats.html file (my implementation of the test cases).  If things go properly, you will see a chrome browser pop up, perform the actions, and close.  In the command line, you should see "ALL TESTS PASSED" as usual.
 
