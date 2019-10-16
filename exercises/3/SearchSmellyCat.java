@@ -1,3 +1,5 @@
+import java.util.Map;
+import java.util.HashMap;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
@@ -5,7 +7,6 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
-//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class SearchSmellyCat {
@@ -16,8 +17,12 @@ public class SearchSmellyCat {
 
   @Before
   public void setUp() throws Exception {
-    //driver = new HtmlUnitDriver();
-    driver = new ChromeDriver();
+    Map<String, Object> prefs = new HashMap<String, Object>();
+    prefs.put("profile.default_content_setting_values.notifications", 2);
+    ChromeOptions options = new ChromeOptions();
+    options.setExperimentalOption("prefs", prefs);
+
+    driver = new ChromeDriver(options);
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
   }
