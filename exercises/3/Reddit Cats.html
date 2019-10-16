@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Reddit Cats</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Title is Cats</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://www.reddit.com/r/cats/<datalist><option>https://www.reddit.com/r/cats/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertTitle</td><td>Cats<datalist><option>Cats</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Blue banner says r/cats</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://www.reddit.com/r/cats/<datalist><option>https://www.reddit.com/r/cats/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//div[@id='SHORTCUT_FOCUSABLE_DIV']/div[2]/div/div/div/div[2]/div/span/a/div/div/span<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User account menu'])[1]/following::span[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='sign up'])[1]/following::span[5]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Posts'])[1]/preceding::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='View'])[1]/preceding::span[1]</option><option>//div[@id='SHORTCUT_FOCUSABLE_DIV']/div[2]/div/div/div/div[2]/div/span/a/div/div/span</option><option>//a/div/div/span</option><option>css=span._2wzi-W7JiZ7A6U6aFvfvSR</option></datalist></td><td>r/cats</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Join button exists</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://www.reddit.com/r/cats/<datalist><option>https://www.reddit.com/r/cats/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//div[@id='SHORTCUT_FOCUSABLE_DIV']/div[2]/div/div/div/div[2]/div[4]/div[2]/div/div/div[2]/div[4]/button<datalist><option>id=subscribe-button-t5_2qhta</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Pictures, videos, articles and questions featuring and about cats.'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='r/cats'])[3]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create post'])[1]/preceding::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='r/cats Rules'])[1]/preceding::button[1]</option><option>//button[@id='subscribe-button-t5_2qhta']</option><option>//div[@id='SHORTCUT_FOCUSABLE_DIV']/div[2]/div/div/div/div[2]/div[4]/div[2]/div/div/div[2]/div[4]/button</option><option>//div[4]/button</option><option>css=#subscribe-button-t5_2qhta</option></datalist></td><td>Join</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">R/Cats rule number 6</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://www.reddit.com/r/cats/<datalist><option>https://www.reddit.com/r/cats/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//div[@id='SHORTCUT_FOCUSABLE_DIV']/div[2]/div/div/div/div[2]/div[4]/div[2]/div/div[3]/div/div[2]/div[6]/div/div[2]/div<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='No Fundraising, competition or advertisement'])[1]/following::div[8]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='No asking for upvotes'])[1]/following::div[16]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='No personal information'])[1]/preceding::div[5]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='No meme, image macro, low-effort content'])[1]/preceding::div[13]</option><option>//div[@id='SHORTCUT_FOCUSABLE_DIV']/div[2]/div/div/div/div[2]/div[4]/div[2]/div/div[3]/div/div[2]/div[6]/div/div[2]/div</option><option>//div[6]/div/div[2]/div</option></datalist></td><td>Don't be Insulting, harassing, or creepy</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Click on first pinned post</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://www.reddit.com/r/cats/<datalist><option>https://www.reddit.com/r/cats/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Discussion'])[1]/preceding::h3[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Stickied post'])[1]/following::h3[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Comments are locked'])[1]/following::h3[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Discussion'])[1]/preceding::h3[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='comment'])[1]/preceding::h3[1]</option><option>//div[@id='t3_9ko0du']/div[2]/div[2]/div/a/div/h3</option><option>//h3</option><option>css=h3._eYtD2XCVieq6emjKBH3m</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//div[3]/div/div/h1<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Comments are locked'])[5]/following::h1[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Archived'])[2]/following::h1[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Discussion'])[3]/preceding::h1[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='comment'])[5]/preceding::h1[1]</option><option>//div[@id='t3_9ko0du']/div/div[3]/div/div/h1</option><option>//div[3]/div/div/h1</option></datalist></td><td>Please do us mods a favor and if you report something for "Claiming ownership of another person's cat", make a post in the post you're reporting linking to the OC poster. Thank you!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Search "smelly cat"</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://www.reddit.com/r/cats/<datalist><option>https://www.reddit.com/r/cats/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=header-search-bar<datalist><option>id=header-search-bar</option><option>name=q</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='cats'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='log in'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='sign up'])[1]/preceding::input[1]</option><option>//input[@id='header-search-bar']</option><option>//div[@id='SearchDropdown']/form/input</option><option>//input</option><option>css=#header-search-bar</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=header-search-bar<datalist><option>id=header-search-bar</option><option>name=q</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='cats'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='log in'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='sign up'])[1]/preceding::input[1]</option><option>//input[@id='header-search-bar']</option><option>//div[@id='SearchDropdown']/form/input</option><option>//input</option><option>css=#header-search-bar</option></datalist></td><td>smelly cat</td>
+</tr>
+<tr><td>sendKeys</td><td>id=header-search-bar<datalist><option>id=header-search-bar</option><option>name=q</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='cats'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='log in'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='sign up'])[1]/preceding::input[1]</option><option>//input[@id='header-search-bar']</option><option>//div[@id='SearchDropdown']/form/input</option><option>//input</option><option>css=#header-search-bar</option></datalist></td><td>${KEY_ENTER}</td>
+</tr>
+<tr><td>click</td><td>//a/div/h3/span<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='All reddit results'])[1]/following::span[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='All Time'])[1]/following::span[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='i.redd.it/9k5dcp...'])[1]/preceding::span[1]</option><option>//div[@id='t3_df4dup']/div[2]/div/div[2]/div/div/a/div/h3/span</option><option>//a/div/h3/span</option><option>css=h3._eYtD2XCVieq6emjKBH3m &gt; span</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//div[3]/div/div/h1<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='u/skr80'])[2]/following::h1[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Posted by'])[76]/following::h1[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cat Picture'])[35]/preceding::h1[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='share'])[76]/preceding::h1[1]</option><option>//div[@id='t3_chvhxz']/div/div[3]/div/div/h1</option><option>//div[3]/div/div/h1</option></datalist></td><td>regexp:.*[Ss][Mm][Ee][Ll][Ll][Yy] [Cc][Aa][Tt].*</td>
+</tr>
+</tbody></table>
+</body>
+</html>
