@@ -4,7 +4,7 @@ Summary and testing concerns:                             _____ / 10
   * Describes and summarizes experience (-5 if not)
   * Describes test failures (-5 if not)
 
-Print out of text suite execution Log:                    _____ / 5
+Print out of test suite execution Log:                    _____ / 5
   
 Screenshots of defects:                                   _____ / 5
   * Must have screenshots for all defects found (-5 if not)
