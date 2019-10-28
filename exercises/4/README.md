@@ -36,7 +36,7 @@ Sample runs are shown in the sample_runs.txt file.
     ```
     For Mac / Linux do (for running MonkeySim with argument 5):
     ```
-    ./run.sh 5
+    bash run.sh 5
     ```
 1. Running MonkeySimTest. For Windows do:
     ```
@@ -44,7 +44,7 @@ Sample runs are shown in the sample_runs.txt file.
     ```
     For Mac / Linux do:
     ```
-    ./runTest.sh
+    bash runTest.sh
     ```    
     If successful, you will get a bunch randomized string concatenation tests ending with the message "ALL TESTS PASSED".
 
