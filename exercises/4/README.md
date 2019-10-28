@@ -48,14 +48,14 @@ Sample runs are shown in the sample_runs.txt file.
     ```    
     If successful, you will get a bunch randomized string concatenation tests ending with the message "ALL TESTS PASSED".
 
-Alternatively, I've created an Eclipse project for you under the src/ directory so you can use Eclipse to import the existing project.
+Alternatively, I've created an Eclipse project for you so you can use Eclipse to import the existing project.
 
 ## What to do
 
 In order to determine the "hot spots" of the application, you will need to run a profiler such as VisualVM (download at https://visualvm.github.io/).  Using the profiler, determine a method you can modify to measurably increase the speed of the application without modifying behavior.
 
 Some tips for using VisualVM:
-1. Your Java app will only show up in VisualVM _during_ execution.  You need to right click on the MonkeySim application and click on Sample in the context menu that shows up.  Then, on the Sampler window that shows up on the main pane, quickly click on the CPU button to start sampling CPU utilization.
+1. Your Java app will only show up in VisualVM _during_ execution.  You need to right click on the MonkeySim application and click on Sample in the context menu that shows up.  Then, on the Sampler window that shows up on the main pane, quickly click on the CPU button to start sampling CPU utilization.  
 ![alt text](VisualVM_sampling.png "Using VisualVM sampler")  
 Note that we are using the Sampler, not the Profiler.  The Sampler takes a sample of method invocations to perform measurement, so is slightly inaccurate compared to Profiler which measures all methods.  But since Sampler only measures a sample, it is much faster compared to Profiler and much less intrusive, which is suitable for our purposes.  Here is a more in-depth comparison between the two if you are interested:  
 http://greyfocus.com/2016/05/visualvm-sampling/.
