@@ -48,7 +48,7 @@ Sample runs are shown in the sample_runs.txt file.
     ```    
     If successful, you will get a bunch randomized string concatenation tests ending with the message "ALL TESTS PASSED".
 
-Alternatively, I've created an Eclipse project for you under the src/ directory so you can use Eclipse to import the existing project.
+Alternatively, I've created an Eclipse project for you so you can use Eclipse to import the existing project.
 
 ## What to do
 
