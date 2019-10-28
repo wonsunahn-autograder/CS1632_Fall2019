@@ -24,7 +24,7 @@ There are no partners for this deliverable.  Please do not work together and ple
     ```
     For Mac / Linux do (for running SlowLifeGUI with argument 10):
     ```
-    ./run.sh 10
+    bash ./run.sh 10
     ```
 1. Running the TestRunner. For Windows do:
     ```
@@ -32,7 +32,7 @@ There are no partners for this deliverable.  Please do not work together and ple
     ```
     For Mac / Linux do:
     ```
-    ./runTest.sh
+    bash ./runTest.sh
     ```    
     Note that as of now, there are no test classes included into TestRunner.
 
