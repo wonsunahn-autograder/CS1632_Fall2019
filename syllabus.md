@@ -86,7 +86,7 @@ AFIST = _A Friendly Introduction to Software Testing_ by Bill Laboon
 
 * (Class 1) EX5: Static Analysis
 
-* (Class 2) NetApp guest lecture on Continuous Integration 
+* (Class 2) NetApp guest lecture on Continuous Integration / DevOps / Agile Testing
 
 ## WEEK 13 (Week of 18 NOV)
 
