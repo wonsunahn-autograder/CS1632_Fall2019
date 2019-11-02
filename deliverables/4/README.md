@@ -80,7 +80,7 @@ ON A SEPARATE PAGE, write a brief summary of how you wrote your pinning tests.  
 * Method choice and refactoring - 40%
 * Pinning Tests - 40%
 
-Please read _grading_rubric.txt_ before submitting!
+Please read grading_rubric.txt before submitting!
 
 Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
  
