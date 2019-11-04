@@ -24,7 +24,7 @@ There are no partners for this deliverable.  Please do not work together and ple
     ```
     For Mac / Linux do (for running SlowLifeGUI with argument 10):
     ```
-    ./run.sh 10
+    bash run.sh 10
     ```
 1. Running the TestRunner. For Windows do:
     ```
@@ -32,7 +32,7 @@ There are no partners for this deliverable.  Please do not work together and ple
     ```
     For Mac / Linux do:
     ```
-    ./runTest.sh
+    bash runTest.sh
     ```    
     Note that as of now, there are no test classes included into TestRunner.
 
@@ -79,6 +79,8 @@ ON A SEPARATE PAGE, write a brief summary of how you wrote your pinning tests.  
 * VisualVM (or other profiler) screenshots (before and after) - 10% 
 * Method choice and refactoring - 40%
 * Pinning Tests - 40%
+
+Please read grading_rubric.txt before submitting!
 
 Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
  

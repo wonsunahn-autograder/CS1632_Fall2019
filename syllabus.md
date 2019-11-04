@@ -63,37 +63,37 @@ AFIST = _A Friendly Introduction to Software Testing_ by Bill Laboon
 
 ## WEEK 9 (Week of 21 OCT)
 
-* (Class 1) Performance Testing, Part 1
+* (Class 1) Performance Testing
   * READING: AFIST, Chapter 19
   
-* (Class 2) Performance Testing, Part 2
+* (Class 2) Stochastic and Property-Based Testing
+  * READING: AFIST, Chapter 18 
 
 ## WEEK 10 (Week of 28 OCT)
 
-* (Class 1) EX4: Performance Testing
+* (Class 1) EX4: Performance Testing / Stochastic Testing
 
-* (Class 2) Static Analysis, Part 1
+* (Class 2) Pairwise and Combinatorial Testing
+  * READING: AFIST, Chapter 17
 
 ## WEEK 11 (Week of 4 NOV)
 
-* (Class 1) Static Analysis, Part 2
+* (Class 1) Static Analysis, Part 1
 
-* (Class 2) EX5: Static Analysis
+* (Class 2) Static Analysis, Part 2
 
 ## WEEK 12 (Week of 11 NOV)
 
-* (Class 1) Pairwise and Combinatorial Testing
-  * READING: AFIST, Chapter 17
+* (Class 1) EX5: Static Analysis
 
-* (Class 2) NetApp guest lecture on Continuous Integration 
+* (Class 2) NetApp guest lecture on Continuous Integration / DevOps / Agile Testing
 
 ## WEEK 13 (Week of 18 NOV)
 
-* (Class 1) Stochastic and Property-Based Testing
-  * READING: AFIST, Chapter 18 
-
-* (Class 2) Security Testing
+* (Class 1) Security Testing
   * READING: AFIST, Chapter 20
+
+* (Class 2) EX6: Penetration Testing
 
 ## WEEK 14 (Week of 25 NOV)
 
@@ -103,10 +103,12 @@ AFIST = _A Friendly Introduction to Software Testing_ by Bill Laboon
 
 ## WEEK 15 (Week of DEC 2)
 
-* (Class 1) EX6: Penetration Testing
+* (Class 1) Midterm 2 review
 
-* (Class 2) MIDTERM 2 (TBD. Could be pushed to finals week depending on progress.)
+* (Class 2) MIDTERM 2 (Confirmed)
 
 ## WEEK 16 (Week of DEC 9)
 
 * Finals week
+
+* NO FINAL; You will be working on your final deliverable.

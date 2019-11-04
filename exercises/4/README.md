@@ -36,7 +36,7 @@ Sample runs are shown in the sample_runs.txt file.
     ```
     For Mac / Linux do (for running MonkeySim with argument 5):
     ```
-    ./run.sh 5
+    bash run.sh 5
     ```
 1. Running MonkeySimTest. For Windows do:
     ```
@@ -44,7 +44,7 @@ Sample runs are shown in the sample_runs.txt file.
     ```
     For Mac / Linux do:
     ```
-    ./runTest.sh
+    bash runTest.sh
     ```    
     If successful, you will get a bunch randomized string concatenation tests ending with the message "ALL TESTS PASSED".
 
@@ -60,7 +60,7 @@ Some tips for using VisualVM:
 Note that we are using the Sampler, not the Profiler.  The Sampler takes a sample of method invocations to perform measurement, so is slightly inaccurate compared to Profiler which measures all methods.  But since Sampler only measures a sample, it is much faster compared to Profiler and much less intrusive, which is suitable for our purposes.  Here is a more in-depth comparison between the two if you are interested:  
 http://greyfocus.com/2016/05/visualvm-sampling/.
 1. Please add the following to the list of JVM arguments: "-XX:+UseCountedLoopSafepoints -XX:-Inline".  The Sampler is only able to sample in what are called Java safepoints.  Safepoints are points in Java code where the JVM can gain control.  These arguments ensure that safepoints are present at every method call and every loop iteration, improving the accuracy of the Sampler (albeit at a slight performance penalty).  I have already added the arugments to the run.sh and run.bat scripts, but if you are running MonkeySim using an IDE, you need to add them to the run configuration.
-
+1. If something doesn't work (e.g. VisualVM refuses to attach to your MonkeySim process, VisualVM refuses to do Sampling, ...) the issue is most likely due to an out-of-date JVM installation.  Either MonkeySim is running on an old JVM or VisualVM is.  Please uninstall all previous Java versions and install the most recent JDK (JDK 13).  Then relaunch VisualVM and MonkeySim and try again.
 1. If your app runs very quickly, you may not have time to perform the above actions before the app terminates!  In that case, you may want to insert a sleep() at the beginning of the main() method, during which you can perform these actions.  For example:
    ```
    try {
