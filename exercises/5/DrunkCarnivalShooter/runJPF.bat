@@ -1,3 +1,3 @@
 javac -cp jpf-core/build/* DrunkCarnivalShooter.java
 
-java -jar jpf-core/build/RunJPF.jar +site=./jpf-core/site.properties DrunkCarnivalShooter.jpf
+java -ea -jar jpf-core/build/RunJPF.jar +site=./jpf-core/site.properties DrunkCarnivalShooter.jpf

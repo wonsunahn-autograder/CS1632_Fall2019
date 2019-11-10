@@ -36,26 +36,49 @@ public class DrunkCarnivalShooter {
 			}
 		}
 		System.out.println("");
-		roundNum++;
 	}
 
-	private int shootFuzz(int targetNum) {
+	private int shootFuzz(int t) {
 		int offsetNum = rand.nextInt(3) - 1;
-		int fuzzedTargetNum = targetNum + offsetNum;
-		return fuzzedTargetNum;
+		int fuzzedT = t + offsetNum;
+		if(offsetNum > 0) {
+			System.out.println("You aimed at target #" + t + " but the Force pulls your bullet to the right.");
+		}
+		else if(offsetNum < 0) {
+			System.out.println("You aimed at target #" + t + " but the Force pulls your bullet to the left.");
+		}
+		return fuzzedT;
 	}
 
-	public boolean shoot(int targetNum) {
-		int newTargetNum = shootFuzz(targetNum);
-		if(newTargetNum != targetNum) {
-			System.out.println("You aimed at target #" + targetNum + " but the Force redirects your bullet to target #" + newTargetNum + ".");
-		}
-		if (targets.get(newTargetNum) == true) {
-			targets.set(newTargetNum, false);
+	public void shoot(int t) {
+		// First decrement the remaining target number if target is standing
+		if(isTargetStanding(t)) {
 			remainingTargetNum--;
+		}
+		// Then take down the target
+		int newT = shootFuzz(t);
+		if(takeDownTarget(newT)) {
+			System.out.println("You hit target #" + newT + "! \"The Force is strong with this one.\", Darth opines.");
+		}
+		else {
+			System.out.println("You miss! \"Do or do not. There is no try.\", Yoda chides.");
+		}
+		// Increment round sequence number
+		roundNum++;
+		// Invariant: remainingTargetNum equals to the number of targets still standing
+		assert remainingTargetNum == targets.stream().filter(p -> p == true).count();
+	}
+	
+	public boolean takeDownTarget(int t) {
+		if(isTargetStanding(t)) {
+			targets.set(t, false);
 			return true;
 		}
 		return false;
+	}
+	
+	public boolean isTargetStanding(int t) {
+		return targets.get(t);
 	}
 
 	public int getRemainingTargetNum() {
@@ -69,14 +92,9 @@ public class DrunkCarnivalShooter {
 			shooter.printRound();
 			System.out.println("Choose your target (0-3): ");
 			int aimedTargetNum = scanner.nextInt();
-			if(shooter.shoot(aimedTargetNum) == true) {
-				System.out.println("You hit! \"The Force is strong with this one.\", Darth opines.");
-			}
-			else {
-				System.out.println("You miss! \"Do or do not. There is no try.\", Yoda chides.");
-			}
+			shooter.shoot(aimedTargetNum);
 			if (shooter.getRemainingTargetNum() == 0) {
-				System.out.println("You decimate the targets. May the Force be with you!");
+				System.out.println("You decimate all the targets. Where is my prize?");
 				break;
 			}
 		}

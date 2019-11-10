@@ -1,4 +1,5 @@
 target = DrunkCarnivalShooter
+target.args = test
 
 cg.enumerate_random = true
 report.console.property_violation=error
