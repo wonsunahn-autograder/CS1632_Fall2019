@@ -9,8 +9,8 @@ look at JPF which is much more rigorous and can prove a program correct.
 
 ## SpotBugs and CheckStyle
 
-SpotBugs: https://spotbugs.github.io/
-CheckStyle: https://checkstyle.sourceforge.io/
+SpotBugs: https://spotbugs.github.io/  
+CheckStyle: https://checkstyle.sourceforge.io/  
 
 Try running both tools on a Sieve of Eratosthenes program, and then fix any
 issues found.  This will allow you to see what kinds of bugs a static analysis
@@ -44,7 +44,7 @@ $ runCheckstyle.bat
 
 For Mac or Linux users, please run the corresponding .sh scripts.
 
-* Note that there is a GUI for SpotBugs if that is what you prefer.  You can launch the GUI by using the following command:
+* There is a GUI for SpotBugs if that is what you prefer.  You can launch the GUI by using the following command:
 ```
 $ java -jar spotbugs-4.0.0-beta4/lib/spotbugs.jar
 ```
@@ -78,4 +78,5 @@ Java Pathfinder is a tool developed by NASA to model check Java programs.  It
 works in exactly the same way we learned in class: it does an exhaustive and
 systematic exploration of program state space to check for correctness.  Let's
 first try out JPF on the example we saw on the Formal Verification lecture
-slides.
+slides:
+![alt text](jpf.png "JPF lecture slide example.")  
