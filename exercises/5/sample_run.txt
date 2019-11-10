@@ -1,0 +1,28 @@
+Round #0:
+  ||    ||    ||    ||
+Choose your target (0-3):
+1
+You aimed at target #1 but the Force redirects your bullet to target #2.
+You hit! "The Force is strong with this one.", Darth opines.
+Round #1:
+  ||    ||          ||
+Choose your target (0-3):
+1
+You hit! "The Force is strong with this one.", Darth opines.
+Round #2:
+  ||                ||
+Choose your target (0-3):
+0
+You aimed at target #0 but the Force redirects your bullet to target #1.
+You miss! "Do or do not. There is no try.", Yoda chides.
+Round #3:
+  ||                ||
+Choose your target (0-3):
+0
+You hit! "The Force is strong with this one.", Darth opines.
+Round #4:
+                    ||
+Choose your target (0-3):
+3
+You hit! "The Force is strong with this one.", Darth opines.
+You decimate the targets. May the Force be with you!
