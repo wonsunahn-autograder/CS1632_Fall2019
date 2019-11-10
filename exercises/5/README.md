@@ -78,5 +78,6 @@ Java Pathfinder is a tool developed by NASA to model check Java programs.  It
 works in exactly the same way we learned in class: it does an exhaustive and
 systematic exploration of program state space to check for correctness.  Let's
 first try out JPF on the example we saw on the Formal Verification lecture
-slides:
-![alt text](jpf.png "JPF lecture slide example."){:height="50%" width="50%"}
+slides:  
+
+<img src="jpf.png" width="50%" height="50%">
