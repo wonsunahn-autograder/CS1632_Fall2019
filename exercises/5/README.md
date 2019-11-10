@@ -71,8 +71,7 @@ That is part of the lesson you should learn from this exercise.
 ## Java Pathfinder (JPF)
 
 Java Pathfinder (JPF): 
-https://github.com/javapathfinder/jpf-core/wiki
-http://javapathfinder.sourceforge.net/
+https://github.com/javapathfinder/jpf-core/wiki, http://javapathfinder.sourceforge.net/
 
 Java Pathfinder is a tool developed by NASA to model check Java programs.  It
 works in exactly the same way we learned in class: it does an exhaustive and
