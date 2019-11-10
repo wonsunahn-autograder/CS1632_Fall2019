@@ -1,0 +1,9 @@
+target = DrunkCarnivalShooter
+
+cg.enumerate_random = true
+report.console.property_violation=error,trace
+
+vm.tree_output = true
+vm.path_output = true
+search.class = .search.heuristic.BFSHeuristic
+listener=.listener.StateSpaceDot

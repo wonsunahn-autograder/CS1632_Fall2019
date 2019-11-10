@@ -1,0 +1,9 @@
+target = Rand
+
+cg.enumerate_random = true
+report.console.property_violation=error,trace
+
+vm.tree_output = true
+vm.path_output = true
+search.multiple_errors = true
+listener=.listener.StateSpaceDot
