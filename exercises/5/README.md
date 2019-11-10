@@ -104,7 +104,7 @@ All you have to do is open the jpf-state-space.dot on a text editor and copy-pas
 
 ### JPF on DrunkCarnivalShooter
 
-Now let's try using JPF to debug and verify a real program.  DrunkCarnivalShooter is a simple text-based game where the player goes to a carnival shooting range and tries to win the prize by shooting all 4 provied targets.  The player can designate what target to shoot for pressing 0-3.  But since the player is drunk, there is an equal chance of the player shooting left or right as shooting straight.  Refer to the file sample_run.txt for an example game play session.
+Now let's try using JPF to debug and verify a real program.  DrunkCarnivalShooter is a simple text-based game where the player goes to a carnival shooting range and tries to win the prize by shooting all 4 provied targets.  The player can designate what target to shoot for pressing 0-3.  But since the player is drunk, there is an equal chance of the player shooting left or right as shooting straight.  Refer to the file [sample_run.txt](sample_run.txt) for an example game play session.
 
 To run the DrunkCarnivalShooter program (for Windows users):
 ```
