@@ -9,8 +9,8 @@ look at JPF which is much more rigorous and can prove a program correct.
 
 ## SpotBugs and CheckStyle
 
-SpotBugs: https://spotbugs.github.io/
-CheckStyle: https://checkstyle.sourceforge.io/
+SpotBugs: https://spotbugs.github.io/  
+CheckStyle: https://checkstyle.sourceforge.io/  
 
 Try running both tools on a Sieve of Eratosthenes program, and then fix any
 issues found.  This will allow you to see what kinds of bugs a static analysis
@@ -44,7 +44,7 @@ $ runCheckstyle.bat
 
 For Mac or Linux users, please run the corresponding .sh scripts.
 
-* Note that there is a GUI for SpotBugs if that is what you prefer.  You can launch the GUI by using the following command:
+* There is a GUI for SpotBugs if that is what you prefer.  You can launch the GUI by using the following command:
 ```
 $ java -jar spotbugs-4.0.0-beta4/lib/spotbugs.jar
 ```
@@ -76,6 +76,27 @@ http://javapathfinder.sourceforge.net/
 
 Java Pathfinder is a tool developed by NASA to model check Java programs.  It
 works in exactly the same way we learned in class: it does an exhaustive and
-systematic exploration of program state space to check for correctness.  Let's
-first try out JPF on the example we saw on the Formal Verification lecture
-slides.
+systematic exploration of program state space to check for correctness.
+
+### JPF on Rand
+
+Let's first try out JPF on the example Rand program we saw on the Formal Verification lecture
+slides:  
+
+<img src="jpf.png" width="50%" height="50%">
+
+To run the Rand program (for Windows users):
+```
+$ runRand.bat
+```
+To run JPF with Rand:
+```
+$ runJPFRand.bat
+```
+
+For Mac or Linux users, please run the corresponding .sh scripts.
+
+When you run Rand with JPF, you can see from the output that it goes through all possible states, thereby finding the two states with division-by-0 exception errors (I configured JPF to find all possible errors).  Also, when you run JPF, you will get a file named jpf-state-space.dot that is a graph representation of the states that you have traversed.  The file is in DOT format that is viewable from the Graphviz viewer.  There is an online version here:  
+http://graphviz.it/
+
+All you have to do is open the jpf-state-space.dot on a text editor and copy-paste it to the website.  Then, you should see a diagram very similar to the one shown above.  Don't pay attention to the source code line numbers.  There seems to be a bug in the JPF source code line calculation code.
