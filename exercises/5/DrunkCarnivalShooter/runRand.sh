@@ -1,3 +1,3 @@
-javac -cp jpf-core/build/* Rand.java
+javac Rand.java
 
-java -cp jpf-core/build/*:. Rand
+java Rand
