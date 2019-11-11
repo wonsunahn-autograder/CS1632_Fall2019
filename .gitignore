@@ -57,3 +57,5 @@ build-iPhoneSimulator/
 *.swp
 .DS_Store
 lectures/.DS_Store
+*.dot
+*.trace
