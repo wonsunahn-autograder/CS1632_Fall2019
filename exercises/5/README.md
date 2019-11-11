@@ -84,7 +84,7 @@ slides:
 
 <img src="jpf.png" width="50%" height="50%">
 
-First cd into the DrunkCarnivalShooter directory before executing the scripts.
+First cd into the Rand directory before executing the scripts.
 
 To run the Rand program (for Windows users):
 ```
@@ -99,7 +99,7 @@ For Mac or Linux users, please run the corresponding .sh scripts.
 
 When you run Rand with JPF, you can see from the screen output that it goes through all possible states, thereby finding the two states with division-by-0 exception errors (I configured JPF to find all possible errors).  Also, when you run JPF, you will get a file named jpf-state-space.dot that is a graph representation of the states that you have traversed.  The file is in DOT format that is viewable from the Graphviz viewer.  There is an online version here: http://graphviz.it/.  All you have to do is open the jpf-state-space.dot on a text editor and copy-paste it to the website.  Then, you should see a diagram very similar to the one shown above.  Don't pay attention to the source code line numbers.  There seems to be a bug in the JPF source code line calculation code.
 
-So, no we know that there are two defective states, how do we debug?  You will see that JPF has generated a trace file named [Rand.trace](Rand.trace) of all the choices it had made to get to that state.  You will see two traces since there are two defective states.  Pay attention to "cur" value of each Random.nextInt invocation (that is the choice JPF has made for that invocation).  The first trace shows values of 0, 2 for a, b and the second trace shows cur values of 1, 1 for a, b.  These are exactly the values that would cause a division-by-0 exception at c = a/(b+a -2).  In this way, the trace file lets you easily trace through the code to get to the defective state.
+So, now we know that there are two defective states, how do we debug?  You will see that JPF has generated a trace file named [Rand.trace](Rand.trace) of all the choices it had made to get to that state.  You will see two traces since there are two defective states.  Pay attention to "cur" value of each Random.nextInt invocation (that is the choice JPF has made for that invocation).  The first trace shows values of 0, 2 for a, b and the second trace shows cur values of 1, 1 for a, b.  These are exactly the values that would cause a division-by-0 exception at c = a/(b+a -2).  In this way, the trace file lets you easily trace through the code to get to the defective state.
 
 ### JPF on DrunkCarnivalShooter
 
@@ -109,14 +109,15 @@ To run the DrunkCarnivalShooter program (for Windows users):
 ```
 $ run.bat
 ```
-To run JPF with DrunkCarnivalShooter:
+
+For Mac or Linux users, please run the corresponding .sh scripts (for this one any following).
+
+You may not notice the bug after playing the game once or twice due to the randomness of the shooting but it is definitely in there.  Now let's try running the JPF tool:
 ```
 $ runJPF.bat
 ```
 
-For Mac or Linux users, please run the corresponding .sh scripts.
-
-You may not notice the bug after playing the game once or twice but it is definitely in there.  The JPF tool also doesn't show any errors but that is because DrunkCarnivalShooter takes user input and JPF does not know how to handle it.  Just like random numbers, we would like to have JPF to go over every possibility.  We will do that by using the Verify API.  But before we do, we first have to import a library in order to be able to use that feature at the top of DrunkCarnivalShooter.java:
+The JPF tool also doesn't show any errors but that is because DrunkCarnivalShooter takes user input and JPF does not know how to handle it.  Just like random numbers, we would like to have JPF to go over every possibility.  We will do that by using the Verify API.  But in order to be able to use that feature, we first have to import a library at the top of DrunkCarnivalShooter.java:
 ```
 import gov.nasa.jpf.vm.Verify;
 ```
@@ -132,9 +133,35 @@ int t = Verify.getInt(0, 3);
 
 The above will direct JPF to generate 4 states each where t is set to 0, 1, 2, or 3 respectively.  Then it will systematically explore each state.  If you wish, you can test a larger set of numbers beyond 0-3.  You can even test strings.  It is just going to generate more states and take longer (the flipside being you will be able to model check your program against a larger set of inputs).
 
-Now let's try running runJPF.bat one more time.  This will show two error states that cause exceptions.  Use the generated DrunkCarnivalShooter.trace trace file in the same way you used Rand.trace to find the input value(s) and the random value(s) that led to the exception.
+Now let's try running runJPF.bat one more time.  This will show an error state with an exception:
+```
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.ArrayIndexOutOfBoundsException: -1
+        at java.util.ArrayList.elementData(java/util/ArrayList.java:422)
+        at java.util.ArrayList.get(java/util/ArrayList.java:435)
+        at DrunkCarnivalShooter.isTargetStanding(DrunkCarnivalShooter.java:83)
+        at DrunkCarnivalShooter.takeDownTarget(DrunkCarnivalShooter.java:75)
+        at DrunkCarnivalShooter.shoot(DrunkCarnivalShooter.java:62)
+        at DrunkCarnivalShooter.main(DrunkCarnivalShooter.java:97)
+```
+Use the generated DrunkCarnivalShooter.trace trace file in the same way you used Rand.trace to find the input value(s) and the random value(s) that led to the exception.
 
-Once you fix these bugs, try running runJPF.bat one more time.  You will get state explosion.  That is, when you run runJPF.bat, JPF is going to fall into an infinite loop and generate an infinite number of states (observed by the ever increasing Round number).  There is no limit to the number of rounds a player can play, hence the explosion.  How can I deal with this explosion and still verify my program?
+Once you fix these bugs, try running runJPF.bat one more time.  Not that you have fixed the buggy state JPF runs for much longer.  In fact, JPF is going to fall into an infinite loop and generate an infinite number of states (observed by the ever increasing Round number).
+```
+...
+Round #20:
+  ||    ||    ||
+Choose your target (0-3):
+You aimed at target #0 but the Force pulls your bullet to the left.
+You miss! "Do or do not. There is no try.", Yoda chides.
+Round #21:
+        ||    ||    ||
+Choose your target (0-3):
+You miss! "Do or do not. There is no try.", Yoda chides.
+... (to infinity)
+```
+There is no theoretical limit to the number of rounds a player can play, hence the state explosion.  How can I deal with this explosion and still verify my program?
 
 We have to somehow narrow down the amount of state we test, or we will be forced to but JPF off after testing only a limited set of rounds.  Let's say the state that we are really interested in relation to the specifications is the state of the 4 targets.  Now if you think about it, the 4 targets can only be in a handful of states: 2 * 2 * 2 * 2 = 16 states (standing or toppled for each).  And this is true no matter how many rounds you go through.  The only thing that constantly changes every round is the round number --- and that is the culprit leading to the state explosion.  The round number is not something we are interested in verifying right now.  So, let's filter that state out!
 
@@ -147,7 +174,18 @@ And now, let's annotate roundNum such that it is filtered out:
 @FilterField private static int roundNum;
 ```
 
-Now if we run runJPF.bat again, JPF will only go up to Round #4 and stop and declare "no errors detected".  How is it able to do this?  This is because all 16 states can be covered in the space of 4 rounds.  Any further number of rounds will result in a match with an already visited state and therefore will not need to be explored.  You can again view the jpf-state-space.dot file on http://graphviz.it/ and see for yourself that a lot of transitions ended up in the same state (match).
+Now if we run runJPF.bat again, JPF will only go up to Round #5 and stop and declare "no errors detected".
+```
+...
+Round #5:
+
+Choose your target (0-3):
+
+====================================================== results
+no errors detected
+```
+
+How is it able to do this?  This is because all 16 states can be covered in the space of 5 rounds.  Any further number of rounds will result in a match with an already visited state and therefore will not need to be explored.  You can again view the jpf-state-space.dot file on http://graphviz.it/ and see for yourself that a lot of transitions ended up in the same state (match).
 
 Now, are we done?  Actually not.  JPF declares no errors but when you actually try playing the game using run.bat, you will notice that often the game will end prematurely or continue even when it should have finished.  That is because the model checker only checked no exceptions are thrown during the course of the game but did not check any other specification.  Looking at the defect, it seems the specification that the game should end when there are no remaining targets has been violated.  So let us check an invariant by inserting an assertion at the end of the shoot(int) method:
 
