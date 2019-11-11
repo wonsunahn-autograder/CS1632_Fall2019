@@ -122,12 +122,14 @@ import gov.nasa.jpf.vm.Verify;
 ```
 Now instead of scanning user input using the following statement:
 ```
-int aimedTargetNum = scanner.nextInt();
+int t = scanner.nextInt();
 ```
 Exhaustively generate all possible inputs using the Verify API:
 ```
-int aimedTargetNum = Verify.getInt(0, 3);
+int t = Verify.getInt(0, 3);
 ```
+* Do the above only when a commandline argument "test" is passed to program.  The "test" argument will put the program in test mode and not in play mode.  You can see "test" is already configured as the commandline argument in the target.args entry in [DrunkCarnivalShooter/Rand.jpf](Rand.jpf)), which is the JPF configuration file use when runJPF.bat is invoked.
+
 The above will direct JPF to generate 4 states each where aimedTargetNum is set to 0, 1, 2, or 3 respectively.  Then it will systematically explore each state.  If you wish, you can test a larger set of numbers beyond 0-3.  You can even test strings.  It is just going to generate more states and take longer (the flipside being you will be able to model check your program against a larger set of inputs).
 
 Now let's try running runJPF.bat one more time.  This will trigger state space exploration and you will quickly be able to find the error states that cause exceptions.  Use the generated DrunkCarnivalShooter.trace trace file in the same way you used Rand.trace to find the input value(s) and the random value(s) that led to the exception.
