@@ -6,4 +6,5 @@ report.console.property_violation=error
 vm.tree_output = true
 vm.path_output = false
 search.multiple_errors = true
-listener=.listener.StateSpaceDot
+listener=.listener.StateSpaceDot,.listener.ChoiceTracker
+choice.trace = Rand.trace

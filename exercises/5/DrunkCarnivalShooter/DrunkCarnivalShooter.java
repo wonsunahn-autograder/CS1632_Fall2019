@@ -66,7 +66,7 @@ public class DrunkCarnivalShooter {
 		// Increment round sequence number
 		roundNum++;
 		// Invariant: remainingTargetNum equals to the number of targets still standing
-		assert remainingTargetNum == targets.stream().filter(p -> p == true).count();
+		// TODO: Insert assertion checking above invariant
 	}
 	
 	public boolean takeDownTarget(int t) {

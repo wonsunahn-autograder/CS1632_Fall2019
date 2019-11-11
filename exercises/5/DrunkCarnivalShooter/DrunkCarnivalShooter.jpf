@@ -7,4 +7,5 @@ report.console.property_violation=error
 vm.tree_output = true
 vm.path_output = false
 search.class = .search.heuristic.BFSHeuristic
-listener=.listener.StateSpaceDot
+listener=.listener.StateSpaceDot,.listener.ChoiceTracker
+choice.trace = DrunkCarnivalShooter.trace
