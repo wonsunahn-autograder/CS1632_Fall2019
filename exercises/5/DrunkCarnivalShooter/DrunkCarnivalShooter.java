@@ -91,8 +91,8 @@ public class DrunkCarnivalShooter {
 		while (true) {
 			shooter.printRound();
 			System.out.println("Choose your target (0-3): ");
-			int aimedTargetNum = scanner.nextInt();
-			shooter.shoot(aimedTargetNum);
+			int t = scanner.nextInt();
+			shooter.shoot(t);
 			if (shooter.getRemainingTargetNum() == 0) {
 				System.out.println("You decimate all the targets. Where is my prize?");
 				break;
