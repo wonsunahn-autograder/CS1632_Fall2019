@@ -128,9 +128,9 @@ Exhaustively generate all possible inputs using the Verify API:
 ```
 int t = Verify.getInt(0, 3);
 ```
-* Invoke Verify instead of Scanner only when a commandline argument "test" is passed to program.  The "test" argument will put the program in test mode and not in play mode.  You can see "test" is already configured as the commandline argument in the target.args entry in [Rand.jpf](DrunkCarnivalShooter/Rand.jpf)), which is the JPF configuration file use when runJPF.bat is invoked.
+* Invoke Verify instead of Scanner only when a commandline argument "test" is passed to program.  The "test" argument will put the program in test mode and not in play mode.  You can see "test" is already configured as the commandline argument in the target.args entry in [DrunkCarnivalShooter.jpf](DrunkCarnivalShooter/DrunkCarnivalShooter.jpf)), which is the JPF configuration file use when [runJPF.bat](DrunkCarnivalShooter/RunJPF.bat) is invoked.
 
-The above will direct JPF to generate 4 states each where aimedTargetNum is set to 0, 1, 2, or 3 respectively.  Then it will systematically explore each state.  If you wish, you can test a larger set of numbers beyond 0-3.  You can even test strings.  It is just going to generate more states and take longer (the flipside being you will be able to model check your program against a larger set of inputs).
+The above will direct JPF to generate 4 states each where t is set to 0, 1, 2, or 3 respectively.  Then it will systematically explore each state.  If you wish, you can test a larger set of numbers beyond 0-3.  You can even test strings.  It is just going to generate more states and take longer (the flipside being you will be able to model check your program against a larger set of inputs).
 
 Now let's try running runJPF.bat one more time.  This will trigger state space exploration and you will quickly be able to find the error states that cause exceptions.  Use the generated DrunkCarnivalShooter.trace trace file in the same way you used Rand.trace to find the input value(s) and the random value(s) that led to the exception.
 
