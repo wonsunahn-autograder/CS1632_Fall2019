@@ -5,7 +5,9 @@ bug finder named SpotBugs, a linter named CheckStyle, and a model checker named
 Java Pathfinder (JPF).  SpotBugs and CheckStyle work in similar ways in that
 both look for patterns that are either symptomatic of a bug (former) or are bad
 coding style (latter).  So we will look at them together first.  Later we will
-look at JPF which is much more rigorous and can prove a program correct.
+look at JPF which is much more rigorous in proving a program correct.
+
+* IMPORTANT: You need Java 8 (1.8.0.231, preferably) to run JPF.  Make sure you have the correct Java version by doing "java -version" and "javac -version" before going into the JPF section.
 
 ## SpotBugs and CheckStyle
 
