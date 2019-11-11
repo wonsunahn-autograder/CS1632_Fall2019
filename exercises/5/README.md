@@ -225,6 +225,6 @@ John Doe
 Jane Doe  
 https://github.com/wonsunahn/CS1632_Fall2019/tree/master/exercises/5
 
-Please submit by Monday (11/13) 11:59 PM to get timely feedback.
+Please submit by Friday (11/15) 11:59 PM to get timely feedback.
 
 IMPORTANT: Please keep the github private and add the following users as collaborators: nikunjgoel95, wonsunahn
