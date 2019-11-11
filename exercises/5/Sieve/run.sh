@@ -1,3 +1,3 @@
 javac Sieve.java
 
-java Sieve %1
+java Sieve $1
