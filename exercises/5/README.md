@@ -5,7 +5,9 @@ bug finder named SpotBugs, a linter named CheckStyle, and a model checker named
 Java Pathfinder (JPF).  SpotBugs and CheckStyle work in similar ways in that
 both look for patterns that are either symptomatic of a bug (former) or are bad
 coding style (latter).  So we will look at them together first.  Later we will
-look at JPF which is much more rigorous and can prove a program correct.
+look at JPF which is much more rigorous in proving a program correct.
+
+* IMPORTANT: You need Java 8 (1.8.0.231, preferably) to run JPF.  Make sure you have the correct Java version by doing "java -version" and "javac -version" before going into the JPF section.
 
 ## SpotBugs and CheckStyle
 
@@ -64,9 +66,17 @@ Sieve of Eratosthenes
 ```
 
 Note that there is a bug in the logic of the code that is not caught by either
-SpotBugs or CheckStyle that will prevent you from getting the above output.
-Since both work by pattern matching they are bad at finding logic problems.
-That is part of the lesson you should learn from this exercise.
+SpotBugs or CheckStyle that will prevent you from getting the above output.  For example, the argument 100 will show the following:
+```
+$ java Sieve 100
+Sieve of Eratosthenes
+> 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 99
+```
+Locate the problem by reviewing the code and fix the problem.
+
+### Lessons on Pattern Matching
+
+Both linters (CheckStyle) and bug finders (SpotBugs) work by pattern matching.  Pattern matching can be good at finding simple bugs that are recurrent across projects and can even catch errors in your documentation.  What they are not good for is finding problems in your program logic (as seen above).  For that, you need dynamic testing that actually executes the program to check program behavior.  Or, you can use model checking that the proves that certain properties hold for all inputs (see below).
 
 ## Java Pathfinder (JPF)
 
@@ -215,6 +225,6 @@ John Doe
 Jane Doe  
 https://github.com/wonsunahn/CS1632_Fall2019/tree/master/exercises/5
 
-Please submit by Monday (11/13) 11:59 PM to get timely feedback.
+Please submit by Friday (11/15) 11:59 PM to get timely feedback.
 
 IMPORTANT: Please keep the github private and add the following users as collaborators: nikunjgoel95, wonsunahn
