@@ -128,7 +128,7 @@ Exhaustively generate all possible inputs using the Verify API:
 ```
 int t = Verify.getInt(0, 3);
 ```
-* Do the above only when a commandline argument "test" is passed to program.  The "test" argument will put the program in test mode and not in play mode.  You can see "test" is already configured as the commandline argument in the target.args entry in [DrunkCarnivalShooter/Rand.jpf](Rand.jpf)), which is the JPF configuration file use when runJPF.bat is invoked.
+* Invoke Verify instead of Scanner only when a commandline argument "test" is passed to program.  The "test" argument will put the program in test mode and not in play mode.  You can see "test" is already configured as the commandline argument in the target.args entry in [Rand.jpf](DrunkCarnivalShooter/Rand.jpf)), which is the JPF configuration file use when runJPF.bat is invoked.
 
 The above will direct JPF to generate 4 states each where aimedTargetNum is set to 0, 1, 2, or 3 respectively.  Then it will systematically explore each state.  If you wish, you can test a larger set of numbers beyond 0-3.  You can even test strings.  It is just going to generate more states and take longer (the flipside being you will be able to model check your program against a larger set of inputs).
 
