@@ -24,7 +24,7 @@ eventually falls into one of the slots at the bottom of the board.  After all
 the beans fall through, the number of beans in each slot is counted.
 
 See the following link for a more detailed description of the machine:
-https://en.wikipedia.org/wiki/Bean_machine
+https://en.wikipedia.org/wiki/Bean_machine.
 
 The bean counter had two contributions to statistics by demonstrating the following:
 1. When the sample size is large enough, a [binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution) approaches a [bell curve](https://en.wikipedia.org/wiki/Normal_distribution).
