@@ -153,7 +153,12 @@ Initially, the unit tests should fail since you haven't written the code.
 Write invariant property assertions for the Java Pathfinder (JPF) model
 checker.  You will notice that BeanCounterLogic.java has an alternate main()
 method.  This main() method is used to provide a rudimentary text user
-interface.  In addition, it serves as a route to model check the
+interface.  You can invoke it by doing:
+```
+java -cp BeanCounter.jar BeanCounterLogic 500 luck
+```
+
+In addition, it serves as a route to model check the
 BeanCounterLogic class (when "test" is passed as a commandline argument).  I
 have intentionally separated out the logic part of the program from the GUI
 explicitly for the purposes of model checking.  Model checking a GUI is tricky
