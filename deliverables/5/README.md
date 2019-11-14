@@ -239,7 +239,7 @@ SpotBugs that have nothing to do with you).
 Even after doing your unit tests and model checking, you still need to verify
 that the program "looks" right end-to-end in the GUI.  This is hard to do using
 automated testing so you will write manual test cases for this.  Refer to the
-`requirements.md` file for the features that need testing.  Each feature should
+[requirements.md](requirements.md) file for the features that need testing.  Each feature should
 have at least *one test case each*.  Also you will show that you have covered
 all your bases by writing a *traceability matrix*.
 
@@ -255,6 +255,8 @@ Further details TBA.
 ## Grading
 
 TBA.
+
+Please review [grading_rubric.txt](grading_rubric.txt) for details.
 
 ## Submission
 
