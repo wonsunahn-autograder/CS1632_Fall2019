@@ -1,0 +1,261 @@
+# CS 1632 - Software Quality Assurance
+Fall Semester 2019
+
+DUE: Decemeber 12, 2019 11:59 PM (No extensions due to grading deadline)
+
+## Deliverable 5
+
+For this final deliverable, you and your partner will develop a full-fledged
+GUI program (with the help of some skeleton code), along with various tests.
+You will be using many of the concepts we have learned during the semester:
+test-driven development (TDD), exploratory testing, automated unit testing,
+code coverage, manual unit testing, static testing, and model checking.  I
+expect the program to be rigorously tested.  Any defect will be cause for point
+deduction.
+
+## Background
+
+The bean counter is a device for statistics experiments devised by English
+scientist Sir Francis Galton. It consists of an upright board with evenly
+spaced pegs in a triangular form.  Beans are dropped from an opening at the top
+of the board. Every time a bean hits a peg, it has a 50% chance of falling to
+the left or to the right.  In this way, each bean takes a random path and
+eventually falls into one of the slots at the bottom of the board.  After all
+the beans fall through, the number of beans in each slot is counted.
+
+See the following link for a more detailed description of the machine:
+[https://en.wikipedia.org/wiki/Bean\_machine]
+
+The bean counter had two contributions to statistics by demonstrating the following:
+1. When the sample size is large enough, a [binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution) approaches a [bell curve](https://en.wikipedia.org/wiki/Normal_distribution).
+2. It also demonstrated a phenomenon named [regression to the mean](https://en.wikipedia.org/wiki/Regression_toward_the_mean).
+
+Regression to the mean had been (and still is) a source of numerous scientific
+misconceptions.  People make conjectures all the time about all types of things
+and provide reasons for it.
+
+1. Why is my favorite sports team performing in a mediocre way when it won the championships last year?  Because my favorite player was traded.
+2. Why did the crime rate in my city fall down to the national average?  Due to better policing.
+3. Why did a student who did exceptionally well on the midterms perform just about average on the finals?  Because the student slacked off.
+
+People always look for reasons for changes in data.  But often the reason
+cannot be explained, because there was no reason for the change to begin with.
+The change in data can just be due to a statistical anomaly named regression to
+the mean.  For example, an answer to question 3. can simply be that the student
+was exceptionally lucky during the midterms (she guessed all multiple choices
+and she got them all correct).  Her luck wore off and she just got what she
+deserved in the finals.  This is called regression to the mean.  Now if the
+exceptional score was due to skill, then the regression would not happen unless
+there was a regression in skill.  The problem is, it is very hard to tell
+whether something was due to luck or skill just by looking at the phenomenon,
+hence the numerous misconceptions.
+
+## Exploratory Testing
+
+The program simulates a bean machine with 10 slots at the bottom (0-9).
+
+Let's first compile the program by running compile.bat:
+```
+$ compile.bat
+```
+Mac/Linux users, please run compile.sh.  Run the .sh extension for all .bat files that follow.
+
+The program is executed with two commandline arguments:
+```
+$ java -cp bin BeanCounterGUI
+Usage: java BeanCounterGUI <number of beans> <luck | skill>
+Example: java BeanCounterGUI 500 luck 
+```
+
+The second argument "luck" or "skill" decides whether individual beans will use
+luck or skill in navigating the bean machine.  
+
+Let's do some exploratory testing.  I have provided a solution JAR file for
+this purpose named BeanCounter.jar.
+
+In luck mode, the bean counter operates conventionally: there is an equal
+chance of going left or right on a peg.  So where the bean lands at the bottom
+would be purely due to luck.  Hence, the beans will be able to observe
+regression to the mean.  Try the following:
+
+1. Run "java -jar BeanCounter.jar 500 luck".
+2. Press the "Fast" button to fast-forward to the end.
+3. Note the average (should be close to 4.5 = 0 + 9 / 2).
+4. Press the "Upper Half" button to just take the upper half of the sample.
+5. Note the average (now it should be much higher since it's the upper half).
+6. Press the "Repeat" button to scoop all the beans and bring them to the top.
+7. Press the "Fast" button to restart the machine.
+8. Note the average is again close to 4.5.
+
+You have just observed regression to the mean.  You took the upper half of the
+class, but when they were put through the exam again, they turned out to be
+just average.
+
+In the skill mode, the beans choose direction based on skill purely.  Each bean
+is randomly assigned a skill level from 0-9 on creation.  A skill level of 9
+means it always makes the "right" choices (pun intended).  That means the bean
+will always go right when a peg is encountered, resulting it falling into slot
+9. A skill evel of 0 means that the bean will always go left, resulting it
+falling into slot 0. For the in-between skill levels, the bean will first go
+right then left. For example, for a skill level of 7, the bean will go right 7
+times then go left twice.  So where the bean lands at the bottom would be
+determined entirely by the skill level of the bean.  Try the following:
+
+1. Run "java -jar BeanCounter.jar 500 skill".
+2. Repeat the same steps as in luck mode.
+
+You will observe that the average does not change at all when you repeat the
+experiment with the upper half of the samples.  There is no regression to the
+mean because the results are already pre-determined by skill level.  Also, you
+will notice the slots filling one by one in the repeat run.  That is because I
+collected the slots at the bottom on by one and since all the beans in one slot
+have the same skill level, the rest follows.
+
+Try out other features of the program by pressing different buttons.
+
+## What to do
+
+I expect you to employ test-driven development (TDD) for this project and fully
+embrace it.  I can guarantee you that it will shorten development time.  You
+are going to write the tests anyway.  Why not write them at the beginning when
+they will be much more useful?  I will lay down the steps, roughly in the order you should perform them.
+
+### Automated Unit Test Writing
+
+Write JUnit tests for each of the methods you are asked to implement marked by
+the "// TODO" comment in the files: BeanCounterLogic.java and Bean.java.  You
+will probably need to add more methods of your own other than the ones
+specified.  For all these methods, write at least *one unit test each*.
+Coverage for both classes should be above *80%* each.  Two files have been
+created for you for this purpose: BeanCounterLogicTest.java and BeanTest.java.
+You can run the JUnit test using TestRunner as usual, using the following
+script:
+
+```
+$ runJUnit.bat
+```
+
+Make use of mocks and test doubles as necessary.  You should not test a
+dependent class along with your target class.  Neither should you introduce
+randomness during test.  You will notice that I have designed the code using
+dependency injection so that this is relatively easy to do.
+
+Initially, the unit tests should fail since you haven't written the code.
+
+### Model Checking Property Writing
+
+Write invariant property assertions for the Java Pathfinder (JPF) model
+checker.  You will notice that BeanCounterLogic.java has an alternate main()
+method.  This main() method is used to provide a rudimentary text user
+interface.  In addition, it serves as a route to model check the
+BeanCounterLogic class (when "test" is passed as a commandline argument).  I
+have intentionally separated out the logic part of the program from the GUI
+explicitly for the purposes of model checking.  Model checking a GUI is tricky
+and so is a multi-threaded event-driven program like BeanCounterGUI.  Yes, JPF
+can model check even multi-threaded programs (!) by exhaustively going through
+all the interleavings.  But it is complicated and it takes a long time.  So we
+will just check the internal logic, which is the important part anyway.  You
+can run JPF by using the following script:
+
+```
+$ runJPF.bat BeanCounter.jpf
+```
+
+In order to have JPF run the BeanCounter, you will first have to let it explore
+a range of bean count and slot count parameters.  As described in the "// TODO"
+comment in the main() method, use the Verify API we learned during the exercise
+to assign 0-3 bean count and 1-5 slot count values.  We will not test slot
+count 0 because then it means there are no slots to receive beans and the
+machine basically falls apart.  These are enough values to give us confidence
+that our machine satisfies system properties.
+
+Remember, JPF only checks for the system property that no exceptions are raised
+if there are no user assertions.  As of now, there is only a single invariant
+assertion in main() method: the one that checks that in-flight beans are at
+legal positions at every step of the experiment.  Add two more assertions, as
+is described in the "// TODO" comments in the main() method.
+
+With those two additionl assertions, the model checker should fail since you
+haven't written the code.  As you code, you will notice JPF running slower due
+to state explosion.  If you want to avoid this, you need to filter out state
+irrelevant to the assertions using the @FilterField annotation we learned
+during the exercise.  In my code, I had 714 states in the model checker (as can
+be seen in the "new=714" number below):
+
+```
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=714,visited=965,backtracked=1679,end=475
+...
+```
+
+Also note that it took less than a second to run the model checker.  In your
+report, you will have to show a screenshot of the above and demonstrate it took
+you less than 10 seconds in order to get full credit.
+
+### Coding
+
+All the GUI coding has already been done for you, since some of you are not
+familiar with Java AWT and event-driven programming.  You only need to
+implement the logic of the machine.  All the parts that you have to fill in
+have been commented with // TODO in the files: BeanCounterLogic.java and
+Bean.java.  You will not need to modify any of the other files.  As you are
+coding, regularly run the unit tests and the model checker, both to check that
+the coded feature was properly implemented and that you have not regressed.
+Your goal in coding should be to make those tests pass.
+
+### Static Testing
+
+Run the CheckStyle linter and the SpotBugs tool regularly while and after
+coding.  When you are done, both tools should show a successful audit:
+
+```
+$ runCheckstyle.bat
+Starting audit...
+Audit done.
+```
+
+```
+$ runSpotbugs.bat
+The following classes needed for analysis were missing:
+  org.junit.runner.JUnitCore
+  org.junit.runner.Result
+  org.junit.runner.notification.Failure
+```
+
+You can consider the above to be a successful audit.  The warning is just
+showing that SpotBugs could not access the JUnit classes (which is a good thing
+because you will see dozens of flagged "bugs" in the JUnit code base found by
+SpotBugs that have nothing to do with you).
+
+### Manual System Testing
+
+Even after doing your unit tests and model checking, you still need to verify
+that the program "looks" right end-to-end in the GUI.  This is hard to do using
+automated testing so you will write manual test cases for this.  Refer to the
+[Requirements.md] file for the features that need testing.  Each feature should
+have at least *one test case each*.  Also you will show that you have covered
+all your bases by writing a *traceability matrix*.
+
+## Format
+
+Every assignment should have a title page with:
+* Your name and your partner name
+* The URL of your code and tests on GitHub
+* The title "CS 1632 - DELIVERABLE 5: End-to-end Testing BeanCounter"
+
+Further details TBA.
+
+## Grading
+
+TBA.
+
+## Submission
+
+Each pairwise group will submit the deliverable once to courseweb, by one member of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 5". Please upload a PDF format of your report.  Don't forget your github url.  Also don't forget to commit and push your final code to your github.  Both the document and your code have to be submitted on time to get credit.
+
+IMPORTANT: Please keep the github private and add the following users as collaborators: nikunjgoel95, wonsunahn.
+
+Nik, our TA, will record the score for both of you on courseweb, along with feedback on where points have been deducted. You and your partner will get the same score. If you feel otherwise, let me know.
+
+Please post on the discussion board, or email me at wahn@pitt.edu, or come to office hours to discuss any problems you have.
