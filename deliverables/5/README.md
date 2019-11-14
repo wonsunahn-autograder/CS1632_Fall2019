@@ -204,6 +204,10 @@ Also note that it took less than a second to run the model checker.  In your
 report, you will have to show a screenshot of the above and demonstrate it took
 you less than 10 seconds in order to get full credit.
 
+Use the following links as reference:  
+https://github.com/javapathfinder/jpf-core/wiki  
+http://javapathfinder.sourceforge.net/
+
 ### Coding
 
 All the GUI coding has already been done for you, since some of you are not
