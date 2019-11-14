@@ -24,7 +24,7 @@ eventually falls into one of the slots at the bottom of the board.  After all
 the beans fall through, the number of beans in each slot is counted.
 
 See the following link for a more detailed description of the machine:
-[https://en.wikipedia.org/wiki/Bean\_machine]
+https://en.wikipedia.org/wiki/Bean_machine
 
 The bean counter had two contributions to statistics by demonstrating the following:
 1. When the sample size is large enough, a [binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution) approaches a [bell curve](https://en.wikipedia.org/wiki/Normal_distribution).
@@ -70,7 +70,7 @@ Example: java BeanCounterGUI 500 luck
 The second argument "luck" or "skill" decides whether individual beans will use
 luck or skill in navigating the bean machine.  
 
-Let's do some exploratory testing.  I have provided a solution JAR file for
+Let's do some exploratory testing.  I have provided a reference implementation for
 this purpose named BeanCounter.jar.
 
 In luck mode, the bean counter operates conventionally: there is an equal
@@ -78,7 +78,10 @@ chance of going left or right on a peg.  So where the bean lands at the bottom
 would be purely due to luck.  Hence, the beans will be able to observe
 regression to the mean.  Try the following:
 
-1. Run "java -jar BeanCounter.jar 500 luck".
+1. Run BeanCounter.jar in luck mode:
+```
+$ java -jar BeanCounter.jar 500 luck
+```
 2. Press the "Fast" button to fast-forward to the end.
 3. Note the average (should be close to 4.5 = 0 + 9 / 2).
 4. Press the "Upper Half" button to just take the upper half of the sample.
@@ -101,15 +104,18 @@ right then left. For example, for a skill level of 7, the bean will go right 7
 times then go left twice.  So where the bean lands at the bottom would be
 determined entirely by the skill level of the bean.  Try the following:
 
-1. Run "java -jar BeanCounter.jar 500 skill".
+1. Run BeanCounter.jar in skill mode:
+```
+$ java -jar BeanCounter.jar 500 skill
+```
 2. Repeat the same steps as in luck mode.
 
 You will observe that the average does not change at all when you repeat the
 experiment with the upper half of the samples.  There is no regression to the
 mean because the results are already pre-determined by skill level.  Also, you
 will notice the slots filling one by one in the repeat run.  That is because I
-collected the slots at the bottom on by one and since all the beans in one slot
-have the same skill level, the rest follows.
+collected the slots at the bottom on by one and all the beans in one slot
+have the same skill level.  So, the beans get sorted out as a result of collection.
 
 Try out other features of the program by pressing different buttons.
 
@@ -233,7 +239,7 @@ SpotBugs that have nothing to do with you).
 Even after doing your unit tests and model checking, you still need to verify
 that the program "looks" right end-to-end in the GUI.  This is hard to do using
 automated testing so you will write manual test cases for this.  Refer to the
-[Requirements.md] file for the features that need testing.  Each feature should
+`requirements.md` file for the features that need testing.  Each feature should
 have at least *one test case each*.  Also you will show that you have covered
 all your bases by writing a *traceability matrix*.
 
