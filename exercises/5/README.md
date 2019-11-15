@@ -94,7 +94,7 @@ slides:
 
 <img src="jpf.png" width="50%" height="50%">
 
-First cd into the Rand directory before executing the scripts.
+First cd into the DrunkCarnivalShooter directory before executing the scripts.
 
 To run the Rand program (for Windows users):
 ```
