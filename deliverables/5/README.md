@@ -70,13 +70,17 @@ Example: java BeanCounterGUI 500 luck
 The second argument "luck" or "skill" decides whether individual beans will use
 luck or skill in navigating the bean machine.  
 
-Let's do some exploratory testing.  I have provided a reference implementation for
-this purpose named BeanCounter.jar.
+Let's do some exploratory testing.  You could use the class files that you have
+just compiled, but the app doesn't do much at this point because the internal
+logic has not yet been implemented (by you).  Instead, let's use a reference
+implementation (that I wrote) named BeanCounter.jar.
 
-In luck mode, the bean counter operates conventionally: there is an equal
-chance of going left or right on a peg.  So where the bean lands at the bottom
-would be purely due to luck.  Hence, the beans will be able to observe
-regression to the mean.  Try the following:
+### Luck Mode
+
+In luck mode, the bean counter operates conventionally as originally built by
+Galton: a bean has an equal chance of going left or right on a peg.  So where
+the bean lands at the bottom is purely due to luck.  Hence, you would expect
+the beans to be heavily susceptible to regression to the mean.  Try the following:
 
 1. Run BeanCounter.jar in luck mode:
 ```
@@ -91,18 +95,22 @@ $ java -jar BeanCounter.jar 500 luck
 8. Note the average is again close to 4.5.
 
 You have just observed regression to the mean.  You took the upper half of the
-class, but when they were put through the exam again, they turned out to be
-just average.
+class, but when they were put through the exam again, they scored just about
+average.  Did they slack off in the second exam?  No, they were just no better
+than the other students to begin with.
+
+### Skill Mode
 
 In the skill mode, the beans choose direction based on skill purely.  Each bean
 is randomly assigned a skill level from 0-9 on creation.  A skill level of 9
-means it always makes the "right" choices (pun intended).  That means the bean
-will always go right when a peg is encountered, resulting it falling into slot
-9. A skill evel of 0 means that the bean will always go left, resulting it
-falling into slot 0. For the in-between skill levels, the bean will first go
-right then left. For example, for a skill level of 7, the bean will go right 7
-times then go left twice.  So where the bean lands at the bottom would be
-determined entirely by the skill level of the bean.  Try the following:
+means the bean always makes the "right" choices (pun intended).  That means the
+bean will always go right when a peg is encountered, resulting it falling into
+the rightmost 9th slot. A skill evel of 0 means that the bean will always go
+left, resulting it falling into the leftmost 0th slot. For the in-between skill
+levels, the bean will first go right then left. For example, for a skill level
+of 7, the bean will go right 7 times then go left twice.  So where the bean
+lands at the bottom would be determined entirely by the skill level of the
+bean.  Try the following:
 
 1. Run BeanCounter.jar in skill mode:
 ```
@@ -112,10 +120,14 @@ $ java -jar BeanCounter.jar 500 skill
 
 You will observe that the average does not change at all when you repeat the
 experiment with the upper half of the samples.  There is no regression to the
-mean because the results are already pre-determined by skill level.  Also, you
-will notice the slots filling one by one in the repeat run.  That is because I
-collected the slots at the bottom on by one and all the beans in one slot
-have the same skill level.  So, the beans get sorted out as a result of collection.
+mean because the results are pre-determined by skill level.  In this case, the
+student performed well on the first exam because they were actually skilled!
+
+Also, you will notice the slots filling sequentially one by one in the repeat
+run.  This is a side-effect of the slots at the bottom being collected one by
+one when the repeat button is pressed.  All the beans in one slot have the same
+skill level so the beans naturally get sorted out as a result of the
+collection.
 
 Try out other features of the program by pressing different buttons.
 
@@ -124,7 +136,8 @@ Try out other features of the program by pressing different buttons.
 I expect you to employ test-driven development (TDD) for this project and fully
 embrace it.  I can guarantee you that it will shorten development time.  You
 are going to write the tests anyway.  Why not write them at the beginning when
-they will be much more useful?  I will lay down the steps, roughly in the order you should perform them.
+they will be much more useful?  I will lay down the steps, roughly in the order
+you should perform them.
 
 ### Automated Unit Test Writing
 
@@ -202,7 +215,8 @@ states:             new=714,visited=965,backtracked=1679,end=475
 
 Also note that it took less than a second to run the model checker.  In your
 report, you will have to show a screenshot of the above and demonstrate it took
-you less than 10 seconds in order to get full credit.
+you less than 10 seconds in order to get full credit.  If not, test a smaller
+range of numbers that pass in 10 seconds and you will get partial credit.
 
 Use the following links as reference:  
 https://github.com/javapathfinder/jpf-core/wiki  
