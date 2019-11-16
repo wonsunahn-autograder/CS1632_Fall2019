@@ -28,6 +28,7 @@ import java.util.Random;
  */
 
 public class BeanCounterLogic {
+	// TODO: Add member methods and variables as needed
 
 	// No bean in that particular Y coordinate
 	public static final int NO_BEAN_IN_YPOS = -1;
