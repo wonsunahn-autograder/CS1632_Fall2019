@@ -47,7 +47,7 @@ and she got them all correct).  Her luck wore off and she just got what she
 deserved in the finals.  This is called regression to the mean.  Now if the
 exceptional score was due to skill, then the regression would not happen unless
 there was a regression in skill.  The problem is, it is very hard to tell
-whether something was due to luck or skill just by looking at the phenomenon,
+whether something was due to luck or skill just by looking at the results,
 hence the numerous misconceptions.
 
 ## Exploratory Testing
@@ -101,12 +101,13 @@ than the other students to begin with.
 
 ### Skill Mode
 
-In the skill mode, the beans choose direction based on skill purely.  Each bean
-is randomly assigned a skill level from 0-9 on creation.  A skill level of 9
-means the bean always makes the "right" choices (pun intended).  That means the
-bean will always go right when a peg is encountered, resulting it falling into
-the rightmost 9th slot. A skill evel of 0 means that the bean will always go
-left, resulting it falling into the leftmost 0th slot. For the in-between skill
+In skill mode, the beans choose direction based on pure skill.  Each bean is
+assigned a skill level from 0-9 on creation according to a bell curve with
+average 4.5 and standard deviation 1.5.  A skill level of 9 means the bean
+always makes the "right" choices (pun intended).  That means the bean will
+always go right when a peg is encountered, resulting it falling into the
+rightmost 9th slot. A skill evel of 0 means that the bean will always go left,
+resulting it falling into the leftmost 0th slot. For the in-between skill
 levels, the bean will first go right then left. For example, for a skill level
 of 7, the bean will go right 7 times then go left twice.  So where the bean
 lands at the bottom would be determined entirely by the skill level of the
@@ -232,6 +233,21 @@ Bean.java.  You will not need to modify any of the other files.  As you are
 coding, regularly run the unit tests and the model checker, both to check that
 the coded feature was properly implemented and that you have not regressed.
 Your goal in coding should be to make those tests pass.
+
+In order to get the bell curve in skill mode, you will have to use the
+Random.nextGaussian() method.  A bell curve is synonymous with normal
+distribution is synonymous with Gaussian distribution, hence the name.  Here is
+the formula you should use:
+
+```
+skill = nextGaussian() * SKILL_STDEV + SKILL_AVERAGE
+```
+
+SKILL\_AVERAGE and SKILL\_DEV are the average and standard deviation of the
+skill values and are pre-computed for you in the Bean.java skeleton code,
+according to the bell curve that [approximates the binomial
+distribution](https://en.wikipedia.org/wiki/Binomial_distribution#Normal_approximation)
+of the beans in luck mode.
 
 ### Static Testing
 
