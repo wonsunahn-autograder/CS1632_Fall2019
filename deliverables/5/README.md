@@ -220,13 +220,13 @@ With those two additionl assertions, the model checker should fail since you
 haven't written the code.  As you code, you will notice JPF running slower due
 to state explosion.  If you want to avoid this, you need to filter out state
 irrelevant to the assertions using the @FilterField annotation we learned
-during the exercise.  In my code, I had 714 states in the model checker (as can
-be seen in the "new=714" number below):
+during the exercise.  In my code, I had 684 states in the model checker (as can
+be seen in the "new=684" number below):
 
 ```
 ====================================================== statistics
 elapsed time:       00:00:00
-states:             new=714,visited=965,backtracked=1679,end=475
+states:             new=684,visited=695,backtracked=1379,end=448
 ...
 ```
 
