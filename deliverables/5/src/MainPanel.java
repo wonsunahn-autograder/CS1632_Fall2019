@@ -60,7 +60,8 @@ public class MainPanel extends JPanel {
 		// Set some display related parameters
 		_timeBetweenFrames = 10;
 		_timeBetweenSteps = 100;
-		_barHeight = beanCount / 4; // Heuristically maximum bar height is less than this
+		// Heuristically maximum height of a bell curve with some headroom
+		_barHeight = (int) Math.round(beanCount * 0.27) + 10; 
 		setBackground(Color.WHITE);
 	}
 
