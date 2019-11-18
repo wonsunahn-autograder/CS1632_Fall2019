@@ -1,9 +1,25 @@
+- [CS 1632 - Software Quality Assurance](#cs-1632---software-quality-assurance)
+  * [Overview](#Overview)
+  * [Background](#background)
+  * [Exploratory Testing](#exploratory-testing)
+    + [Luck Mode](#luck-mode)
+    + [Skill Mode](#skill-mode)
+  * [What to do](#what-to-do)
+    + [Automated Unit Test Writing](#automated-unit-test-writing)
+    + [Model Checking Property Writing](#model-checking-property-writing)
+    + [Coding](#coding)
+    + [Static Testing](#static-testing)
+    + [Manual System Testing](#manual-system-testing)
+  * [Format](#format)
+  * [Grading](#grading)
+  * [Submission](#submission)
+  
 # CS 1632 - Software Quality Assurance
 Fall Semester 2019
 
 DUE: Decemeber 12, 2019 11:59 PM (No extensions due to grading deadline)
 
-## Deliverable 5
+## Overview
 
 For this final deliverable, you and your partner will develop a full-fledged
 GUI program (with the help of some skeleton code), along with various tests.
