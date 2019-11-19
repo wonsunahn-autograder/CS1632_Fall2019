@@ -133,7 +133,13 @@ bean.  Try the following:
 ```
 $ java -jar BeanCounter.jar 500 skill
 ```
-2. Repeat the same steps as in luck mode.
+2. Press the "Fast" button to fast-forward to the end.
+3. Note the average (should be close to 4.5 = 0 + 9 / 2).
+4. Press the "Upper Half" button to just take the upper half of the sample.
+5. Note the average (now it should be much higher since it's the upper half).
+6. Press the "Repeat" button to scoop all the beans and bring them to the top.
+7. Press the "Fast" button to restart the machine.
+8. Note the average is exactly the same as the average noted in 5.
 
 You will observe that the average does not change at all when you repeat the
 experiment with the upper half of the samples.  There is no regression to the
