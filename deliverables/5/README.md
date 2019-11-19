@@ -139,7 +139,7 @@ $ java -jar BeanCounter.jar 500 skill
 5. Note the average (now it should be much higher since it's the upper half).
 6. Press the "Repeat" button to scoop all the beans and bring them to the top.
 7. Press the "Fast" button to restart the machine.
-8. Note the average is exactly the same as the average noted in 5.
+8. Note the average is exactly the same as the average noted in Step 5.
 
 You will observe that the average does not change at all when you repeat the
 experiment with the upper half of the samples.  There is no regression to the
