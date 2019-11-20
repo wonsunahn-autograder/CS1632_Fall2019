@@ -326,9 +326,11 @@ At the very end, add a traceability matrix.
 
 ## Grading
 
-TBA.
-
 Please review [grading_rubric.txt](grading_rubric.txt) for details.
+
+Note that there is Extra Credit under the discretion of the instructor and TA.
+
+Also note there are NO LATE SUBMISSIONS due to the grading deadline.  Any submission issues (such as inaccessible repository) may result in a 0.
 
 ## Submission
 
