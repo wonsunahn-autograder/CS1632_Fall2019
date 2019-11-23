@@ -29,6 +29,10 @@ code coverage, manual unit testing, static testing, and model checking.  I
 expect the program to be rigorously tested.  Any defect will be cause for point
 deduction.
 
+* IMPORTANT: You need Java 8 (1.8.0.231, preferably) to run JPF.  Make sure you
+  have the correct Java version by doing "java -version" and "javac -version"
+before going into the JPF section.
+
 ## Background
 
 The bean counter is a device for statistics experiments devised by English
@@ -183,6 +187,30 @@ randomness during test.  You will notice that I have designed the code using
 dependency injection so that this is relatively easy to do.
 
 Initially, the unit tests should fail since you haven't written the code.
+
+Note: in order to achieve high coverage, you may have to unit test the *main()*
+method for BeanCounterLogic this time.  In general, main() methods are not
+amenable to unit testing because they are, by design, not amenable to
+dependency injection.  But there are cases where the main() method is too large
+to ignore in terms of test coverage.  Ideally, the main() method is small
+enough to ignore, but testers do not get to choose the code they test (sigh).
+
+In principle, writing a unit test for a main() method is exactly the same as
+for any other method.  You pass the commandline arguments you want to test to
+the "String[] args" argument and that's it.  You will not be able to perform
+dependency injection or mocking so you will be forced to test the Bean class
+along with the target BeanCounterLogic class, but c'est la vie.  Review Chapter
+14.6 "Testing System Output" in the textbook in order to test system output
+against the requirements.
+
+You can also test the JPF code inside the main() method by passing "test" as
+the commandline argument.  But you will then have to have the JPF libraries in
+the classpath and also ensure that you are running Java 8 (see above).  If you
+are using Eclipse, that means adding those libraries and JRE System Library
+(jdk 1.8) to your Project > Properties > Java Build Path > Libraries.  You also
+need to add them to runJUnit.bat or runJUnit.sh if you are running from the
+commandline.  They are there in the most recent version on github (as of
+11/23).
 
 ### Model Checking Property Writing
 
